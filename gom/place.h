@@ -1,0 +1,41 @@
+/* Include file for the place substructure in the gedcom object model.
+   Copyright (C) 2002 The Genes Development Team
+   This file is part of the Gedcom parser library.
+   Contributed by Peter Verthez <Peter.Verthez@advalvas.be>, 2002.
+
+   The Gedcom parser library is free software; you can redistribute it
+   and/or modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The Gedcom parser library is distributed in the hope that it will be
+   useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the Gedcom parser library; if not, write to the
+   Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+   02111-1307 USA.  */
+
+/* $Id: place.h,v 1.5 2003/01/12 16:18:06 verthezp Exp $ */
+/* $Name: R0_90_0 $ */
+
+#ifndef __PLACE_H
+#define __PLACE_H
+
+#include "gom.h"
+#include "gom_internal.h"
+
+void place_subscribe();
+int write_place(Gedcom_write_hndl hndl, int parent, struct place* place);
+
+DECLARE_SUB_MAKEFUNC(place);
+
+DECLARE_UNREFALLFUNC(place);
+DECLARE_CLEANFUNC(place);
+DECLARE_ADDFUNC2(place, source_citation);
+DECLARE_ADDFUNC2(place, note_sub);
+DECLARE_ADDFUNC2(place, user_data);
+
+#endif /* __PLACE_H */

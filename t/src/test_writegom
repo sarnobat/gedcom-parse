@@ -1,0 +1,42 @@
+#!/bin/sh
+# $Id: test_writegom,v 1.3 2002/12/28 13:23:11 verthezp Exp $
+# $Name: R0_90_0 $
+
+builddir=`pwd`
+if [ -z "$srcdir" ]
+then
+  srcdir=.
+fi
+
+test_program=writegomtest
+test_libs="$builddir/../gedcom/libgedcom.la $builddir/../gom/libgedcom_gom.la"
+gedcom_out=1
+
+. $srcdir/src/test_prologue.sh
+
+terminator=$1
+encoding=$2
+unicode_details=$3
+infile=$4
+options="$options -t $terminator -e $encoding"
+
+if [ "$infile" ]
+then
+  if [ -z "$srcdir" ]
+  then
+    testfile=$infile
+  else
+    case $file in
+      ./*) testfile=$infile ;;
+      *)   testfile=$srcdir/input/$infile ;;
+    esac
+  fi
+  options="$options -i $testfile"
+fi
+
+if [ "$encoding" = "UNICODE" ]
+then
+  options="$options -u $unicode_details"
+fi
+
+. $srcdir/src/test_bulk.sh

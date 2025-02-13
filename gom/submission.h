@@ -1,0 +1,37 @@
+/* Include file for the submission object in the gedcom object model.
+   Copyright (C) 2002 The Genes Development Team
+   This file is part of the Gedcom parser library.
+   Contributed by Peter Verthez <Peter.Verthez@advalvas.be>, 2002.
+
+   The Gedcom parser library is free software; you can redistribute it
+   and/or modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The Gedcom parser library is distributed in the hope that it will be
+   useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the Gedcom parser library; if not, write to the
+   Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+   02111-1307 USA.  */
+
+/* $Id: submission.h,v 1.4 2003/01/03 18:47:32 verthezp Exp $ */
+/* $Name: R0_90_0 $ */
+
+#ifndef __SUBMISSION_H
+#define __SUBMISSION_H
+
+#include "gom.h"
+#include "gom_internal.h"
+
+void submission_subscribe();
+void submission_cleanup();
+int write_submission(Gedcom_write_hndl hndl);
+
+DECLARE_MAKEFUNC(submission);
+DECLARE_ADDFUNC2(submission, user_data);
+
+#endif /* __SUBMISSION_H */
