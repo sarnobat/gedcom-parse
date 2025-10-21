@@ -1,3 +1,0 @@
-#!/bin/sh
-
-$srcdir/src/test_script -fn $0 0 unknown.ged
