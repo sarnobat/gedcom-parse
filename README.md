@@ -14,6 +14,25 @@ Mirrored from
 ## test
 * https://github.com/sarnobat/gedcom-parse/blob/main/gedcom-parse-0.90.0/t/src/test_script
 
+## help
+```
+gedcom-parse test program for libgedcom
+
+Usage:  testgedcom [options] file
+Options:
+  -h    Show this help text
+  -nc   Disable compatibility mode
+  -fi   Fail immediately on errors
+  -fd   Deferred fail on errors, but parse completely
+  -fn   No fail on errors
+  -dg   Debug setting: only libgedcom debug messages
+  -da   Debug setting: libgedcom + yacc debug messages
+  -2    Run the test parse 2 times instead of once
+  -3    Run the test parse 3 times instead of once
+  -b    Parse a bogus file (bogus.ged) before parsing the main file
+  -q    No output to standard output
+  -o <outfile>  File to generate output to (def. testgedcom.out)
+```
 ## Original README
 
 ```
