@@ -1,0 +1,27 @@
+# List of source files containing translatable strings
+# $Id: POTFILES.in,v 1.14 2003/02/02 14:43:59 verthezp Exp $
+# $Name: R0_90_0 $
+
+gedcom/encoding.c
+gedcom/encoding_state.c
+gedcom/gedcom.y
+gedcom/gedcom_date.y
+gedcom/gedcom_date.lex
+gedcom/gedcom_lex_common.c
+gedcom/multilex.c
+gedcom/message.c
+gedcom/interface.c
+gedcom/xref.c
+gedcom/compat.c
+gedcom/write.c
+gedcom/age.c
+gedcom/date.c
+gedcom/buffer.c
+gom/gom.c
+gom/gom_modify.c
+gom/event.c
+gom/lds_event.c
+bin/gedcom-check.c
+bin/gedcom-sanitize.c
+
+

@@ -1,0 +1,564 @@
+ERROR: Error: The input 'België' is not a valid UTF-8 string
+ERROR: Error: The input 'België' is not a valid string for the locale
+
+Initial date value:
+  type: 0
+  date1:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+ERROR: Error: Date is not normalized: some fields are invalid
+String: ''
+
+Setting only year string:
+  type: 0
+  date1:
+    calendar type: 0
+    day: '', -1
+    month: '', -1
+    year: '1990', 1990
+    year type: 0
+    date type: 2
+    sdn1: 2447893
+    sdn2: 2448257
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+String: '1990'
+
+Setting only year number:
+  type: 0
+  date1:
+    calendar type: 0
+    day: '', -1
+    month: '', -1
+    year: '1989', 1989
+    year type: 0
+    date type: 2
+    sdn1: 2447528
+    sdn2: 2447892
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+String: '1989'
+
+Setting only SDN 1:
+  type: 0
+  date1:
+    calendar type: 0
+    day: '31', 31
+    month: 'AUG', 8
+    year: '2132', 2132
+    year type: 0
+    date type: 1
+    sdn1: 2500000
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+String: '31 AUG 2132'
+
+Same date in Hebrew calendar:
+  type: 0
+  date1:
+    calendar type: 2
+    day: '19', 19
+    month: 'ELL', 13
+    year: '5892', 5892
+    year type: 0
+    date type: 1
+    sdn1: 2500000
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+String: '@#DHEBREW@ 19 ELL 5892'
+WARNING: Warning: SDN 1 isn't a valid date in the given calendar
+
+Same date in French revolution calendar:
+  type: 0
+  date1:
+    calendar type: 3
+    day: '0', 0
+    month: 'ELL', 0
+    year: '0', 0
+    year type: 0
+    date type: 1
+    sdn1: 2500000
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+ERROR: Error: Date is not normalized: some fields are invalid
+String: ''
+
+Valid French revolution date:
+  type: 0
+  date1:
+    calendar type: 3
+    day: '16', 16
+    month: 'PLUV', 5
+    year: '7', 7
+    year type: 0
+    date type: 1
+    sdn1: 2378166
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+String: '@#DFRENCH R@ 16 PLUV 7'
+ERROR: Error: Cross-reference key '@FAM1@' is already in use
+ERROR: Error: Cross-reference key '@SUBMITTER@' is already in use
+WARNING: Warning: Could not move struct of type xref_list
+Intermediate output:
+=== HEADER ===
+Source:
+  ID: 'TEST_UPDATE'
+  Name: '(null)'
+  Version: '0.90.0'
+  Corporation:
+    Name: '(null)'
+    Address: 0x<null>
+    Phone 1: '(null)'
+    Phone 2: '(null)'
+    Phone 3: '(null)'
+  Data:
+    Name: '(null)'
+    Date: 0x<null>
+    Copyright: '(null)'
+Destination: '(null)'
+Date: 
+  type: 0
+  date1:
+    calendar type: 3
+    day: '16', 16
+    month: 'PLUV', 5
+    year: '7', 7
+    year type: 0
+    date type: 1
+    sdn1: 2378166
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+Time: '(null)'
+Submitter: 
+  type: 7
+  xref: '@SUBMITTER@'
+  object: 0x<non-null>
+Submission: 0x<null>
+File name: '(null)'
+Copyright: '(null)'
+Gedcom:
+  Version: '5.5'
+  Form: 'LINEAGE-LINKED'
+Character set:
+  Name: 'ASCII'
+  Version: '(null)'
+Language: '(null)'
+Place hierarchy: '(null)'
+Note:
+====
+(null)
+====
+User data: 0x<null>
+=== SUBMISSION (@SUBMISSION@) ===
+Submitter: 0x<null>
+Family file: '(null)'
+Temple code: '(null)'
+Nr of ancestor generations: '(null)'
+Nr of descendant generations: '(null)'
+Ordinance process flag: '(null)'
+Record id: '(null)'
+User data: 0x<null>
+=== FAMILY (@FAM1@) ===
+Family events: 0x<null>
+Husband: 
+  type: 2
+  xref: '@IND1@'
+  object: 0x<non-null>
+Wife: 0x<null>
+Children: 
+  reference: 
+    type: 2
+    xref: '@IND2@'
+    object: 0x<non-null>
+  User data: 0x<null>
+Number of children: '3'
+Submitters: 0x<null>
+LDS spouse sealings: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== INDIVIDUAL (@IND1@) ===
+Restriction notice: '(null)'
+names: 0x<null>
+Sex: '(null)'
+Individual events: 0x<null>
+Individual attributes: 0x<null>
+LDS individual ordinance: 0x<null>
+Child to family links: 0x<null>
+Spouse to family links: 0x<null>
+Submitters: 0x<null>
+Associations: 0x<null>
+Aliases: 0x<null>
+Ancestor interest: 0x<null>
+Descendant interest: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+Record file nr: '(null)'
+Ancestral file nr: '(null)'
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== INDIVIDUAL (@IND2@) ===
+Restriction notice: '(null)'
+names: 
+  Name: 
+    Name: 'Testname'
+    Prefix: '(null)'
+    Given: '(null)'
+    Nickname: '(null)'
+    Surname prefix: '(null)'
+    Surname: '(null)'
+    Suffix: '(null)'
+    citations: 0x<null>
+    notes: 0x<null>
+    User data: 0x<null>
+Sex: '(null)'
+Individual events: 0x<null>
+Individual attributes: 0x<null>
+LDS individual ordinance: 0x<null>
+Child to family links: 0x<null>
+Spouse to family links: 0x<null>
+Submitters: 0x<null>
+Associations: 0x<null>
+Aliases: 0x<null>
+Ancestor interest: 0x<null>
+Descendant interest: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+Record file nr: '(null)'
+Ancestral file nr: '(null)'
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== INDIVIDUAL (@IND3@) ===
+Restriction notice: '(null)'
+names: 0x<null>
+Sex: '(null)'
+Individual events: 0x<null>
+Individual attributes: 0x<null>
+LDS individual ordinance: 0x<null>
+Child to family links: 0x<null>
+Spouse to family links: 0x<null>
+Submitters: 0x<null>
+Associations: 0x<null>
+Aliases: 0x<null>
+Ancestor interest: 0x<null>
+Descendant interest: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+Record file nr: '(null)'
+Ancestral file nr: '(null)'
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== INDIVIDUAL (@IND4@) ===
+Restriction notice: '(null)'
+names: 0x<null>
+Sex: '(null)'
+Individual events: 0x<null>
+Individual attributes: 0x<null>
+LDS individual ordinance: 0x<null>
+Child to family links: 0x<null>
+Spouse to family links: 0x<null>
+Submitters: 0x<null>
+Associations: 0x<null>
+Aliases: 0x<null>
+Ancestor interest: 0x<null>
+Descendant interest: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+Record file nr: '(null)'
+Ancestral file nr: '(null)'
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== MULTIMEDIA (@OBJ1@) ===
+Form: '(null)'
+Title: '(null)'
+notes: 0x<null>
+Data: '(null)'
+Continued: 0x<null>
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== NOTE (@NOTE1@) ===
+Text: 'This is some text'
+citations: 0x<null>
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== REPOSITORY (@REPO1@) ===
+Name: '(null)'
+Address: 0x<null>
+Phone 1: '(null)'
+Phone 2: '(null)'
+Phone 3: '(null)'
+notes: 0x<null>
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== SOURCE (@SOUR1@) ===
+Data: 
+  events: 0x<null>
+  Agency: '(null)'
+  notes: 0x<null>
+Author: '(null)'
+Title: '(null)'
+Abbreviation: '(null)'
+Publication: '(null)'
+Text: '(null)'
+Repository:
+  Link: 0x<null>
+  notes: 0x<null>
+  source descriptions: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== SUBMITTER (@SUBMITTER@) ===
+Name: 'BelgiÃ«'
+Address: 0x<null>
+Phone 1: '(null)'
+Phone 2: '(null)'
+Phone 3: '(null)'
+multimedia links: 0x<null>
+Language 1: '(null)'
+Language 2: '(null)'
+Language 3: '(null)'
+Record file nr: '(null)'
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== SUBMITTER (@SUBM2@) ===
+Name: '(null)'
+Address: 0x<null>
+Phone 1: '(null)'
+Phone 2: '(null)'
+Phone 3: '(null)'
+multimedia links: 0x<null>
+Language 1: '(null)'
+Language 2: '(null)'
+Language 3: '(null)'
+Record file nr: '(null)'
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== USER RECORD (@USER1@) ===
+Tag: '_TAG'
+String value: '(null)'
+Xref value: 0x<null>
+User data: 0x<null>
+ERROR: Error: Cross-reference @IND1@ still in use
+Test succeeded
+=== HEADER ===
+Source:
+  ID: 'TEST_UPDATE'
+  Name: '(null)'
+  Version: '0.90.0'
+  Corporation:
+    Name: '(null)'
+    Address: 0x<null>
+    Phone 1: '(null)'
+    Phone 2: '(null)'
+    Phone 3: '(null)'
+  Data:
+    Name: '(null)'
+    Date: 0x<null>
+    Copyright: '(null)'
+Destination: '(null)'
+Date: 
+  type: 0
+  date1:
+    calendar type: 3
+    day: '16', 16
+    month: 'PLUV', 5
+    year: '7', 7
+    year type: 0
+    date type: 1
+    sdn1: 2378166
+    sdn2: -1
+  date2:
+    calendar type: 4
+    day: '', -1
+    month: '', -1
+    year: '', -1
+    year type: 0
+    date type: 0
+    sdn1: -1
+    sdn2: -1
+  phrase: ''
+Time: '(null)'
+Submitter: 
+  type: 7
+  xref: '@SUBMITTER@'
+  object: 0x<non-null>
+Submission: 0x<null>
+File name: '(null)'
+Copyright: '(null)'
+Gedcom:
+  Version: '5.5'
+  Form: 'LINEAGE-LINKED'
+Character set:
+  Name: 'ASCII'
+  Version: '(null)'
+Language: '(null)'
+Place hierarchy: '(null)'
+Note:
+====
+(null)
+====
+User data: 0x<null>
+=== INDIVIDUAL (@IND3@) ===
+Restriction notice: '(null)'
+names: 0x<null>
+Sex: '(null)'
+Individual events: 0x<null>
+Individual attributes: 0x<null>
+LDS individual ordinance: 0x<null>
+Child to family links: 0x<null>
+Spouse to family links: 0x<null>
+Submitters: 0x<null>
+Associations: 0x<null>
+Aliases: 0x<null>
+Ancestor interest: 0x<null>
+Descendant interest: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+Record file nr: '(null)'
+Ancestral file nr: '(null)'
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== INDIVIDUAL (@IND4@) ===
+Restriction notice: '(null)'
+names: 0x<null>
+Sex: '(null)'
+Individual events: 0x<null>
+Individual attributes: 0x<null>
+LDS individual ordinance: 0x<null>
+Child to family links: 0x<null>
+Spouse to family links: 0x<null>
+Submitters: 0x<null>
+Associations: 0x<null>
+Aliases: 0x<null>
+Ancestor interest: 0x<null>
+Descendant interest: 0x<null>
+citations: 0x<null>
+multimedia links: 0x<null>
+notes: 0x<null>
+Record file nr: '(null)'
+Ancestral file nr: '(null)'
+user refs: 0x<null>
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>
+=== SUBMITTER (@SUBMITTER@) ===
+Name: 'BelgiÃ«'
+Address: 0x<null>
+Phone 1: '(null)'
+Phone 2: '(null)'
+Phone 3: '(null)'
+multimedia links: 0x<null>
+Language 1: '(null)'
+Language 2: '(null)'
+Language 3: '(null)'
+Record file nr: '(null)'
+Record ID: '(null)'
+change date: 0x<null>
+User data: 0x<null>

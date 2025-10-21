@@ -1,0 +1,706 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-02-02 16:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gedcom/encoding.c:69
+#, c-format
+msgid "Duplicate entry found for encoding '%s', ignoring"
+msgstr ""
+
+#: gedcom/encoding.c:105
+#, c-format
+msgid "No encoding defined for '%s'"
+msgstr ""
+
+#: gedcom/encoding.c:189
+msgid "Could not register path cleanup function"
+msgstr ""
+
+#: gedcom/encoding.c:204
+msgid "Could not register encoding cleanup function"
+msgstr ""
+
+#: gedcom/encoding.c:218
+#, c-format
+msgid "Could not open encoding configuration file '%s': %s"
+msgstr ""
+
+#: gedcom/encoding.c:225
+#, c-format
+msgid "Line too long in encoding configuration file '%s'"
+msgstr ""
+
+#: gedcom/encoding.c:235
+#, c-format
+msgid "Missing data in encoding configuration file '%s'"
+msgstr ""
+
+#: gedcom/encoding.c:244
+#, c-format
+msgid "Error closing file '%s': %s"
+msgstr ""
+
+#: gedcom/encoding.c:262
+#, c-format
+msgid "Error opening conversion context for encoding %s: %s"
+msgstr ""
+
+#: gedcom/encoding_state.c:82
+msgid "Unicode cannot be encoded into one byte"
+msgstr ""
+
+#: gedcom/gedcom.y:214
+#, c-format
+msgid "The tag '%s' is mandatory within '%s', but missing"
+msgstr ""
+
+#: gedcom/gedcom.y:238
+#, c-format
+msgid "The tag '%s' can maximally occur %d time(s) within '%s'"
+msgstr ""
+
+#: gedcom/gedcom.y:245
+#, c-format
+msgid "The tag '%s' is not a valid tag within '%s'"
+msgstr ""
+
+#: gedcom/gedcom.y:250
+#, c-format
+msgid "The tag '%s' is not a valid top-level tag"
+msgstr ""
+
+#: gedcom/gedcom.y:1438 gedcom/gedcom.y:3971
+msgid "Missing value"
+msgstr ""
+
+#: gedcom/gedcom.y:3876 gedcom/gedcom.y:3913
+#, c-format
+msgid "Undefined tag (and not a valid user tag): %s"
+msgstr ""
+
+#: gedcom/gedcom.y:3939
+msgid "Standard tag not allowed in user section"
+msgstr ""
+
+#. empty
+#: gedcom/gedcom.y:3960
+msgid "Missing pointer"
+msgstr ""
+
+#: gedcom/gedcom.y:4061
+msgid "Missing cross-reference"
+msgstr ""
+
+#: gedcom/gedcom.y:4226
+msgid "Internal error: count level mismatch"
+msgstr ""
+
+#: gedcom/gedcom.y:4230
+msgid "Internal error: count array overflow"
+msgstr ""
+
+#: gedcom/gedcom.y:4237
+msgid "Internal error: count array calloc error"
+msgstr ""
+
+#: gedcom/gedcom.y:4283
+msgid "Internal error: count array underflow"
+msgstr ""
+
+#. On error: put entire string in 'phrase' member
+#. as fallback
+#: gedcom/date.c:426 gedcom/gedcom_date.y:129
+msgid "Putting date in 'phrase' member"
+msgstr ""
+
+#: gedcom/gedcom_date.y:340
+#, c-format
+msgid "Year is missing: '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:345
+#, c-format
+msgid "Month is missing: '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:354
+#, c-format
+msgid "Too many characters in day '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:365
+#, c-format
+msgid "Not a valid day number: '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:390
+#, c-format
+msgid "Not a valid month for the given calendar: '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:403
+#, c-format
+msgid "Too many characters in year '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:413
+#, c-format
+msgid "Year after slash should be two digits: '%s/%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:422
+#, c-format
+msgid "Year after slash should be following year: '%s/%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:430
+#, c-format
+msgid "Too many characters in year '%s/%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.y:446
+#, c-format
+msgid "Not a valid year: '%s'"
+msgstr ""
+
+#: gedcom/gedcom_date.lex:43
+msgid "Date token stack overflow"
+msgstr ""
+
+#: gedcom/gedcom_date.lex:53
+msgid "Unexpected input"
+msgstr ""
+
+#: gedcom/gedcom_date.lex:58
+msgid "Unknown calendar type"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:99
+#, c-format
+msgid "Line too long, max %d characters allowed"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:105
+msgid "Level number with leading zero not allowed"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:110
+#, c-format
+msgid "Level number out of range [0..%d]"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:115
+#, c-format
+msgid "GEDCOM level number is %d higher than previous"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:121
+#, c-format
+msgid "Tag '%s' too long, max %d characters allowed"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:127
+#, c-format
+msgid "Invalid character for encoding: '%s' (0x%02x)"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:132
+#, c-format
+msgid "Pointer '%s' too long, max %d characters allowed"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:138
+msgid "'@' character should be written as '@@' in values"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:143
+msgid "Tab character is not allowed in values"
+msgstr ""
+
+#: gedcom/gedcom_lex_common.c:148
+#, c-format
+msgid "Unexpected character: '%s' (0x%02x)"
+msgstr ""
+
+#: gedcom/multilex.c:75
+#, c-format
+msgid "Error positioning input file: %s"
+msgstr ""
+
+#: gedcom/multilex.c:86 gedcom/multilex.c:118
+#, c-format
+msgid "Error reading from input file: %s"
+msgstr ""
+
+#: gedcom/multilex.c:126 gedcom/multilex.c:132
+msgid "Unknown encoding, falling back to one-byte"
+msgstr ""
+
+#: gedcom/multilex.c:160
+msgid "Internal error: GEDCOM parser not initialized"
+msgstr ""
+
+#: gedcom/multilex.c:165
+#, c-format
+msgid "Could not open file '%s': %s"
+msgstr ""
+
+#: gedcom/message.c:64
+#, c-format
+msgid "Warning on line %d: "
+msgstr ""
+
+#: gedcom/message.c:66
+msgid "Warning: "
+msgstr ""
+
+#: gedcom/message.c:83
+#, c-format
+msgid "Error on line %d: "
+msgstr ""
+
+#: gedcom/message.c:85
+msgid "Error: "
+msgstr ""
+
+#: gedcom/buffer.c:64 gedcom/message.c:97 gom/gom.c:221
+#, c-format
+msgid "Could not allocate memory at %s, %d"
+msgstr ""
+
+#: gedcom/interface.c:36
+msgid "Internal error: Duplicate registration for default callback"
+msgstr ""
+
+#: gedcom/interface.c:46
+#, c-format
+msgid "Internal error: Duplicate registration for record type %d"
+msgstr ""
+
+#: gedcom/interface.c:58
+#, c-format
+msgid "Internal error: Duplicate registration for element type %d"
+msgstr ""
+
+#: gedcom/interface.c:106
+msgid "null value"
+msgstr ""
+
+#: gedcom/interface.c:107
+msgid "character string"
+msgstr ""
+
+#: gedcom/interface.c:108
+msgid "date"
+msgstr ""
+
+#: gedcom/interface.c:109
+msgid "age"
+msgstr ""
+
+#: gedcom/interface.c:110
+msgid "cross-reference"
+msgstr ""
+
+#: gedcom/interface.c:126
+#, c-format
+msgid "Wrong cast of value in file %s, at line %d: %s instead of %s"
+msgstr ""
+
+#: gedcom/xref.c:33
+msgid "nothing"
+msgstr ""
+
+#: gedcom/xref.c:34
+msgid "a family"
+msgstr ""
+
+#: gedcom/xref.c:35
+msgid "an individual"
+msgstr ""
+
+#: gedcom/xref.c:36
+msgid "a note"
+msgstr ""
+
+#: gedcom/xref.c:37
+msgid "a multimedia object"
+msgstr ""
+
+#: gedcom/xref.c:38
+msgid "a source repository"
+msgstr ""
+
+#: gedcom/xref.c:39
+msgid "a source"
+msgstr ""
+
+#: gedcom/xref.c:40
+msgid "a submitter"
+msgstr ""
+
+#: gedcom/xref.c:41
+msgid "a submission record"
+msgstr ""
+
+#: gedcom/xref.c:42
+msgid "an application-specific record"
+msgstr ""
+
+#: gedcom/xref.c:116
+msgid "Could not register xref cleanup function"
+msgstr ""
+
+#: gedcom/xref.c:134
+#, c-format
+msgid "Cross-reference %s used on line %d is not defined"
+msgstr ""
+
+#: gedcom/xref.c:139
+#, c-format
+msgid "Cross-reference %s defined on line %d is never used"
+msgstr ""
+
+#: gedcom/xref.c:187
+#, c-format
+msgid "Cross-reference %s previously defined as pointer to %s, on line %d"
+msgstr ""
+
+#: gedcom/xref.c:192 gedcom/xref.c:337
+#, c-format
+msgid "Cross-reference %s previously defined as pointer to %s"
+msgstr ""
+
+#: gedcom/xref.c:199
+#, c-format
+msgid "Cross-reference %s previously used as pointer to %s, on line %d"
+msgstr ""
+
+#: gedcom/xref.c:204
+#, c-format
+msgid "Cross-reference %s previously used as pointer to %s"
+msgstr ""
+
+#: gedcom/xref.c:258 gedcom/xref.c:278 gedcom/xref.c:302 gedcom/xref.c:326
+#: gedcom/xref.c:357
+#, c-format
+msgid "String '%s' is not a valid cross-reference key"
+msgstr ""
+
+#: gedcom/xref.c:283
+#, c-format
+msgid "Cross-reference %s already exists"
+msgstr ""
+
+#: gedcom/xref.c:307 gedcom/xref.c:331 gedcom/xref.c:362
+#, c-format
+msgid "Cross-reference %s not defined"
+msgstr ""
+
+#: gedcom/xref.c:367
+#, c-format
+msgid "Cross-reference %s still in use"
+msgstr ""
+
+#: gedcom/compat.c:168
+#, c-format
+msgid "Enabling compatibility with '%s', version %d"
+msgstr ""
+
+#: gedcom/compat.c:171
+#, c-format
+msgid "Enabling compatibility with '%s'"
+msgstr ""
+
+#: gedcom/compat.c:281
+#, c-format
+msgid "Adding link to submitter record with xref '%s'"
+msgstr ""
+
+#: gedcom/compat.c:428
+#, c-format
+msgid "Header change time '%s' lost in the compatibility (out of context)"
+msgstr ""
+
+#: gedcom/compat.c:468
+#, c-format
+msgid "Country '%s' lost in the compatibility (out of context)"
+msgstr ""
+
+#: gedcom/compat.c:531
+#, c-format
+msgid "Converting 5.5.1 tag '%s' to standard 5.5 user tag '%s'"
+msgstr ""
+
+#: gedcom/compat.c:552
+#, c-format
+msgid "Adding link to family record with xref '%s'"
+msgstr ""
+
+#: gedcom/compat.c:592
+#, c-format
+msgid "Converting non-standard tag '%s' to user tag '%s'"
+msgstr ""
+
+#: gedcom/compat.c:744
+#, c-format
+msgid "Converting undefined tag '%s' to user tag '%s'"
+msgstr ""
+
+#: gedcom/compat.c:761
+#, c-format
+msgid "Converting invalidly used tag '%s' to user tag '%s'"
+msgstr ""
+
+#: gedcom/write.c:85
+msgid "Line too long"
+msgstr ""
+
+#: gedcom/write.c:98
+#, c-format
+msgid "Error converting output string: %s (%d conversion failures)"
+msgstr ""
+
+#: gedcom/write.c:111
+#, c-format
+msgid "Forcing HEAD.CHAR value to '%s'"
+msgstr ""
+
+#: gedcom/write.c:141
+#, c-format
+msgid "The tag %s doesn't support newlines"
+msgstr ""
+
+#: gedcom/write.c:206
+#, c-format
+msgid "Could not open encoding '%s' for writing: %s"
+msgstr ""
+
+#: gedcom/write.c:214
+#, c-format
+msgid "Could not open file '%s' for writing: %s"
+msgstr ""
+
+#: gedcom/write.c:231
+msgid "Byte order mark configured, but not relevant"
+msgstr ""
+
+#: gedcom/write.c:262
+#, c-format
+msgid "Not a valid tag: %d"
+msgstr ""
+
+#: gedcom/write.c:267
+#, c-format
+msgid "The element or record type '%s' requires a specific tag for writing"
+msgstr ""
+
+#: gedcom/write.c:280
+#, c-format
+msgid "Wrong data type for writing element or record type '%s'"
+msgstr ""
+
+#: gedcom/write.c:298
+#, c-format
+msgid "Parent %d not found during write of %d"
+msgstr ""
+
+#: gedcom/age.c:64
+msgid "Number out of range in age"
+msgstr ""
+
+#: gedcom/age.c:75
+msgid "Duplicate year indication in age"
+msgstr ""
+
+#: gedcom/age.c:83
+msgid "Duplicate month indication in age"
+msgstr ""
+
+#: gedcom/age.c:91
+msgid "Duplicate day indication in age"
+msgstr ""
+
+#: gedcom/age.c:96
+#, c-format
+msgid "Unrecognized indication in age: '%s'"
+msgstr ""
+
+#: gedcom/age.c:151
+msgid "Unrecognized age format"
+msgstr ""
+
+#: gedcom/date.c:150
+msgid "Cannot compute SDN for unknown calendar type"
+msgstr ""
+
+#: gedcom/date.c:174
+msgid "Year has to be given in bounded date"
+msgstr ""
+
+#: gedcom/date.c:185 gedcom/date.c:194
+#, c-format
+msgid "Error converting date: year %d, month %d, day %d"
+msgstr ""
+
+#: gedcom/date.c:213
+msgid "Cannot compute from SDN for unknown calendar type"
+msgstr ""
+
+#: gedcom/date.c:221
+msgid "SDN 1 should be bigger than zero"
+msgstr ""
+
+#: gedcom/date.c:228
+msgid "SDN 1 isn't a valid date in the given calendar"
+msgstr ""
+
+#: gedcom/date.c:235
+msgid "SDN 2 should be -1 for exact dates"
+msgstr ""
+
+#: gedcom/date.c:241
+msgid "SDN 2 should be bigger than zero"
+msgstr ""
+
+#: gedcom/date.c:245
+msgid "SDN 2 should be bigger than SDN 1"
+msgstr ""
+
+#: gedcom/date.c:252
+msgid "SDN 2 isn't a valid date in the given calendar"
+msgstr ""
+
+#: gedcom/date.c:273
+msgid "SDN1/SDN2 isn't a bounded date"
+msgstr ""
+
+#: gedcom/date.c:299
+msgid "Cannot compute months for unknown calendar type"
+msgstr ""
+
+#: gedcom/date.c:332
+msgid "Cannot compute month names for unknown calendar type"
+msgstr ""
+
+#: gedcom/date.c:413
+#, c-format
+msgid "Empty value changed to '%s'"
+msgstr ""
+
+#: gedcom/date.c:435
+msgid "Date is not normalized: some fields are invalid"
+msgstr ""
+
+#: gedcom/buffer.c:59
+msgid "Could not register buffer cleanup function"
+msgstr ""
+
+#: gom/gom.c:115
+msgid "Could not register gom cleanup function"
+msgstr ""
+
+#: gom/gom.c:226
+#, c-format
+msgid "Cross-reference key '%s' is already in use"
+msgstr ""
+
+#: gom/gom.c:234
+#, c-format
+msgid "Internal error: Unexpected context at %s, line %d: %s"
+msgstr ""
+
+#: gom/gom.c:240
+#, c-format
+msgid "Internal error: No context at %s, line %d"
+msgstr ""
+
+#: gom/gom.c:246
+#, c-format
+msgid "Could not move struct of type %s"
+msgstr ""
+
+#: gom/gom.c:251
+#, c-format
+msgid "Could not find struct of type %s in chain"
+msgstr ""
+
+#: gom/gom.c:258
+#, c-format
+msgid "Data loss in import: \"%d %s %s\""
+msgstr ""
+
+#: gom/gom_modify.c:56
+#, c-format
+msgid "The input '%s' is not a valid UTF-8 string"
+msgstr ""
+
+#: gom/gom_modify.c:84
+#, c-format
+msgid "The input '%s' is not a valid string for the locale"
+msgstr ""
+
+#: gom/gom_modify.c:126 gom/gom_modify.c:160 gom/gom_modify.c:178
+#, c-format
+msgid "No record found for xref '%s'"
+msgstr ""
+
+#: gom/gom_modify.c:188
+#, c-format
+msgid "Xref '%s' not part of chain"
+msgstr ""
+
+#: gom/event.c:297 gom/lds_event.c:151
+#, c-format
+msgid "Internal error: unknown evt tag %d"
+msgstr ""
+
+#: gom/event.c:301
+#, c-format
+msgid "Internal error: unknown evt type %d"
+msgstr ""
+
+#: gom/event.c:317
+msgid "Internal error: wrong parent for evt->family"
+msgstr ""
+
+#: bin/gedcom-check.c:121
+msgid "Parse succeeded\n"
+msgstr ""
+
+#: bin/gedcom-check.c:124 bin/gedcom-sanitize.c:188
+msgid "Parse failed\n"
+msgstr ""
+
+#: bin/gedcom-check.c:126
+msgid "  Note: Compatibility mode was not enabled\n"
+msgstr ""
+
+#: bin/gedcom-check.c:127
+msgid "  You could try the check again using the '-c' option\n"
+msgstr ""
+
+#: bin/gedcom-sanitize.c:173
+#, c-format
+msgid "Parse succeeded, now writing file '%s'\n"
+msgstr ""
+
+#: bin/gedcom-sanitize.c:181
+msgid "Write succeeded\n"
+msgstr ""
+
+#: bin/gedcom-sanitize.c:184
+msgid "Write failed\n"
+msgstr ""
