@@ -4,8 +4,15 @@ Mirrored from
 * https://gedcom-parse.sourceforge.net/
 * https://sourceforge.net/projects/gedcom-parse/
 
+## main()
+
+* https://github.com/sarnobat/gedcom-parse/blob/main/gedcom-parse-0.90.0/t/src/standalone.c#L251
+
 ## src
 * https://github.com/sarnobat/gedcom-parse/tree/main/gedcom-parse-0.90.0/t/src
+
+## test
+* https://github.com/sarnobat/gedcom-parse/blob/main/gedcom-parse-0.90.0/t/src/test_script
 
 ## Original README
 
