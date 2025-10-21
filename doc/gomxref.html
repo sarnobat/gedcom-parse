@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 FINAL//EN">
+<html>
+<head>
+  <title>Gedcom object model in C</title>
+  <script language="JavaScript" type="text/javascript">
+  <!--
+    function popup_gedcom(sublink) {
+      Gedcom = window.open( 'http://www.gendex.com/gedcom55/55gcch2.htm' + '#' + sublink,
+			    'Gedcom reference',
+			    'scrollbars=yes,resizable=yes,toolbar=no,height=400, width=400');
+    }
+  // -->
+  </script>
+</head>
+<body bgcolor="White">
+  
+<h1 align="center">Gedcom object model in C: Structures</h1>
+This page provides a cross-reference of all objects in the Gedcom object
+model for C.  The '(?)' links are links to the
+<a href="http://www.gendex.com/gedcom55/55gctoc.htm">Gedcom standard</a>
+giving the meaning of each field.
+<P>
+The following links are fast links to the
+main structures in the Gedcom object model:
+
+<UL>
+  <LI><a href="#header">struct header</a><br>
+  <LI><a href="#submission">struct submission</a><br>
+  <LI><a href="#family">struct family</a><br>
+  <LI><a href="#individual">struct individual</a><br>
+  <LI><a href="#multimedia">struct multimedia</a><br>
+  <LI><a href="#note">struct note</a><br>
+  <LI><a href="#repository">struct repository</a><br>
+  <LI><a href="#source">struct source</a><br>
+  <LI><a href="#submitter">struct submitter</a><br>
+  <LI><a href="#user_rec">struct user_rec</a><br>
+
+</UL>
+<HR>
+
+<h2>Main structures</h2>
+<CODE><PRE>
+ 
+<a name="header"><B>struct header</B></a> { (<A href="javascript:popup_gedcom('HEADER')">?</A>)
+  struct header_source { 
+    char *id; (<A href="javascript:popup_gedcom('APPROVED_SYSTEM_ID')">?</A>)
+    char *name; (<A href="javascript:popup_gedcom('NAME_OF_PRODUCT')">?</A>)
+    char *version; (<A href="javascript:popup_gedcom('VERSION_NUMBER')">?</A>)
+    struct header_corporation { 
+      char *name; (<A href="javascript:popup_gedcom('NAME_OF_BUSINESS')">?</A>)
+      <a href="#address">struct address</a> *address; 
+      char *phone[3]; (<A href="javascript:popup_gedcom('PHONE_NUMBER')">?</A>)
+    } corporation; 
+    struct header_data { 
+      char *name; (<A href="javascript:popup_gedcom('NAME_OF_SOURCE_DATA')">?</A>)
+      <a href="interface.html#date_value">struct date_value</a> *date; (<A href="javascript:popup_gedcom('PUBLICATION_DATE')">?</A>)
+      char *copyright; (<A href="javascript:popup_gedcom('COPYRIGHT_SOURCE_DATA')">?</A>)
+    } data; 
+  } source; 
+  char *destination; (<A href="javascript:popup_gedcom('RECEIVING_SYSTEM_NAME')">?</A>)
+  <a href="interface.html#date_value">struct date_value</a> *date; (<A href="javascript:popup_gedcom('TRANSMISSION_DATE')">?</A>)
+  char *time; (<A href="javascript:popup_gedcom('TIME_VALUE')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *submitter; 
+  <a href="interface.html#xref_value">struct xref_value</a> *submission; 
+  char *filename; (<A href="javascript:popup_gedcom('FILE_NAME')">?</A>)
+  char *copyright; (<A href="javascript:popup_gedcom('COPYRIGHT_GEDCOM_FILE')">?</A>)
+  struct header_gedcom { 
+    char *version; (<A href="javascript:popup_gedcom('VERSION_NUMBER')">?</A>)
+    char *form; (<A href="javascript:popup_gedcom('GEDCOM_FORM')">?</A>)
+  } gedcom; 
+  struct header_charset { 
+    char *name; (<A href="javascript:popup_gedcom('CHARACTER_SET')">?</A>)
+    char *version; (<A href="javascript:popup_gedcom('VERSION_NUMBER')">?</A>)
+  } charset; 
+  char *language; (<A href="javascript:popup_gedcom('LANGUAGE_OF_TEXT')">?</A>)
+  char *place_hierarchy; (<A href="javascript:popup_gedcom('PLACE_HIERARCHY')">?</A>)
+  char *note; (<A href="javascript:popup_gedcom('GEDCOM_CONTENT_DESCRIPTION')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+}; 
+ 
+<a name="submission"><B>struct submission</B></a> { (<A href="javascript:popup_gedcom('SUBMISSION_RECORD')">?</A>)
+  char *xrefstr; 
+  <a href="interface.html#xref_value">struct xref_value</a> *submitter; 
+  char *family_file; (<A href="javascript:popup_gedcom('NAME_OF_FAMILY_FILE')">?</A>)
+  char *temple_code; (<A href="javascript:popup_gedcom('TEMPLE_CODE')">?</A>)
+  char *nr_of_ancestor_gens; (<A href="javascript:popup_gedcom('GENERATIONS_OF_ANCESTORS')">?</A>)
+  char *nr_of_descendant_gens; (<A href="javascript:popup_gedcom('GENERATIONS_OF_DESCENDANTS')">?</A>)
+  char *ordinance_process_flag; (<A href="javascript:popup_gedcom('ORDINANCE_PROCESS_FLAG')">?</A>)
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+}; 
+ 
+<a name="family"><B>struct family</B></a> { (<A href="javascript:popup_gedcom('FAM_RECORD')">?</A>)
+  char *xrefstr; 
+  <a href="#event">struct event</a> *event; 
+  <a href="interface.html#xref_value">struct xref_value</a> *husband; 
+  <a href="interface.html#xref_value">struct xref_value</a> *wife; 
+  <a href="#xref_list">struct xref_list</a> *children; 
+  char *nr_of_children; (<A href="javascript:popup_gedcom('COUNT_OF_CHILDREN')">?</A>)
+  <a href="#xref_list">struct xref_list</a> *submitters; 
+  <a href="#lds_event">struct lds_event</a> *lds_spouse_sealing; 
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#multimedia_link">struct multimedia_link</a> *mm_link; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_ref_number">struct user_ref_number</a> *ref; 
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#family">struct family</a> *next; 
+  <a href="#family">struct family</a> *previous; 
+}; 
+ 
+<a name="individual"><B>struct individual</B></a> { (<A href="javascript:popup_gedcom('INDIVIDUAL_RECORD')">?</A>)
+  char *xrefstr; 
+  char *restriction_notice; (<A href="javascript:popup_gedcom('RESTRICTION_NOTICE')">?</A>)
+  <a href="#personal_name">struct personal_name</a> *name; 
+  char *sex; (<A href="javascript:popup_gedcom('SEX_VALUE')">?</A>)
+  <a href="#event">struct event</a> *event; 
+  <a href="#event">struct event</a> *attribute; 
+  <a href="#lds_event">struct lds_event</a> *lds_individual_ordinance; 
+  <a href="#family_link">struct family_link</a> *child_to_family; 
+  <a href="#family_link">struct family_link</a> *spouse_to_family; 
+  <a href="#xref_list">struct xref_list</a> *submitters; 
+  <a href="#association">struct association</a> *association; 
+  <a href="#xref_list">struct xref_list</a> *alias; 
+  <a href="#xref_list">struct xref_list</a> *ancestor_interest; 
+  <a href="#xref_list">struct xref_list</a> *descendant_interest; 
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#multimedia_link">struct multimedia_link</a> *mm_link; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  char *record_file_nr; (<A href="javascript:popup_gedcom('PERMANENT_RECORD_FILE_NUMBER')">?</A>)
+  char *ancestral_file_nr; (<A href="javascript:popup_gedcom('ANCESTRAL_FILE_NUMBER')">?</A>)
+  <a href="#user_ref_number">struct user_ref_number</a> *ref; 
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#individual">struct individual</a> *next; 
+  <a href="#individual">struct individual</a> *previous; 
+}; 
+ 
+<a name="multimedia"><B>struct multimedia</B></a> { (<A href="javascript:popup_gedcom('MULTIMEDIA_RECORD')">?</A>)
+  char *xrefstr; 
+  char *form; (<A href="javascript:popup_gedcom('MULTIMEDIA_FORMAT')">?</A>)
+  char *title; (<A href="javascript:popup_gedcom('DESCRIPTIVE_TITLE')">?</A>)
+  <a href="#note_sub">struct note_sub</a> *note; 
+  char *data; (<A href="javascript:popup_gedcom('ENCODED_MULTIMEDIA_LINE')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *continued; 
+  <a href="#user_ref_number">struct user_ref_number</a> *ref; 
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#multimedia">struct multimedia</a> *next; 
+  <a href="#multimedia">struct multimedia</a> *previous; 
+}; 
+ 
+<a name="note"><B>struct note</B></a> { (<A href="javascript:popup_gedcom('NOTE_RECORD')">?</A>)
+  char *xrefstr; 
+  char *text; (<A href="javascript:popup_gedcom('SUBMITTER_TEXT')">?</A>)
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#user_ref_number">struct user_ref_number</a> *ref; 
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#note">struct note</a> *next; 
+  <a href="#note">struct note</a> *previous; 
+}; 
+ 
+<a name="repository"><B>struct repository</B></a> { (<A href="javascript:popup_gedcom('REPOSITORY_RECORD')">?</A>)
+  char *xrefstr; 
+  char *name; (<A href="javascript:popup_gedcom('NAME_OF_REPOSITORY')">?</A>)
+  <a href="#address">struct address</a> *address; 
+  char *phone[3]; (<A href="javascript:popup_gedcom('PHONE_NUMBER')">?</A>)
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_ref_number">struct user_ref_number</a> *ref; 
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#repository">struct repository</a> *next; 
+  <a href="#repository">struct repository</a> *previous; 
+}; 
+ 
+<a name="source"><B>struct source</B></a> { (<A href="javascript:popup_gedcom('SOURCE_RECORD')">?</A>)
+  char *xrefstr; 
+  struct source_data { 
+    <a href="#source_event">struct source_event</a> *event; 
+    char *agency; (<A href="javascript:popup_gedcom('RESPONSIBLE_AGENCY')">?</A>)
+    <a href="#note_sub">struct note_sub</a> *note; 
+  } data; 
+  char *author; (<A href="javascript:popup_gedcom('SOURCE_ORIGINATOR')">?</A>)
+  char *title; (<A href="javascript:popup_gedcom('SOURCE_DESCRIPTIVE_TITLE')">?</A>)
+  char *abbreviation; (<A href="javascript:popup_gedcom('SOURCE_FILED_BY_ENTRY')">?</A>)
+  char *publication; (<A href="javascript:popup_gedcom('SOURCE_PUBLICATION_FACTS')">?</A>)
+  char *text; (<A href="javascript:popup_gedcom('TEXT_FROM_SOURCE')">?</A>)
+  struct repo_link { 
+    <a href="interface.html#xref_value">struct xref_value</a> *link; 
+    <a href="#note_sub">struct note_sub</a> *note; 
+    <a href="#source_description">struct source_description</a> *description; 
+  } repository; 
+  <a href="#multimedia_link">struct multimedia_link</a> *mm_link; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_ref_number">struct user_ref_number</a> *ref; 
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#source">struct source</a> *next; 
+  <a href="#source">struct source</a> *previous; 
+}; 
+ 
+<a name="submitter"><B>struct submitter</B></a> { (<A href="javascript:popup_gedcom('SUBMITTER_RECORD')">?</A>)
+  char *xrefstr; 
+  char *name; (<A href="javascript:popup_gedcom('SUBMITTER_NAME')">?</A>)
+  <a href="#address">struct address</a> *address; 
+  char *phone[3]; (<A href="javascript:popup_gedcom('PHONE_NUMBER')">?</A>)
+  <a href="#multimedia_link">struct multimedia_link</a> *mm_link; 
+  char *language[3]; (<A href="javascript:popup_gedcom('LANGUAGE_PREFERENCE')">?</A>)
+  char *record_file_nr; (<A href="javascript:popup_gedcom('SUBMITTER_REGISTERED_RFN')">?</A>)
+  char *record_id; (<A href="javascript:popup_gedcom('AUTOMATED_RECORD_ID')">?</A>)
+  <a href="#change_date">struct change_date</a> *change_date; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#submitter">struct submitter</a> *next; 
+  <a href="#submitter">struct submitter</a> *previous; 
+}; 
+ 
+<a name="user_rec"><B>struct user_rec</B></a> { 
+  char *xrefstr; 
+  char *tag; 
+  char *str_value; 
+  <a href="interface.html#xref_value">struct xref_value</a> *xref_value; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#user_rec">struct user_rec</a> *next; 
+  <a href="#user_rec">struct user_rec</a> *previous; 
+}; 
+ 
+
+</PRE></CODE>
+<HR>
+
+<h2>Sub-structures</h2>
+<CODE><PRE>
+ 
+<a name="user_data"><B>struct user_data</B></a> { 
+  int level; 
+  char *tag; 
+  char *str_value; 
+  <a href="interface.html#xref_value">struct xref_value</a> *xref_value; 
+  <a href="#user_data">struct user_data</a> *next; 
+  <a href="#user_data">struct user_data</a> *previous; 
+}; 
+ 
+<a name="address"><B>struct address</B></a> { (<A href="javascript:popup_gedcom('ADDRESS_STRUCTURE')">?</A>)
+  char *full_label; (<A href="javascript:popup_gedcom('ADDRESS_LINE')">?</A>)
+  char *line1; (<A href="javascript:popup_gedcom('ADDRESS_LINE1')">?</A>)
+  char *line2; (<A href="javascript:popup_gedcom('ADDRESS_LINE2')">?</A>)
+  char *city; (<A href="javascript:popup_gedcom('ADDRESS_CITY')">?</A>)
+  char *state; (<A href="javascript:popup_gedcom('ADDRESS_STATE')">?</A>)
+  char *postal; (<A href="javascript:popup_gedcom('ADDRESS_POSTAL_CODE')">?</A>)
+  char *country; (<A href="javascript:popup_gedcom('ADDRESS_COUNTRY')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+}; 
+ 
+<a name="text"><B>struct text</B></a> { 
+  char *text; (<A href="javascript:popup_gedcom('TEXT_FROM_SOURCE')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#text">struct text</a> *next; 
+  <a href="#text">struct text</a> *previous; 
+}; 
+ 
+<a name="source_citation"><B>struct source_citation</B></a> { (<A href="javascript:popup_gedcom('SOURCE_CITATION')">?</A>)
+  char *description; (<A href="javascript:popup_gedcom('SOURCE_DESCRIPTION')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *reference; 
+  char *page; (<A href="javascript:popup_gedcom('WHERE_WITHIN_SOURCE')">?</A>)
+  char *event; (<A href="javascript:popup_gedcom('EVENT_TYPE_CITED_FROM')">?</A>)
+  char *role; (<A href="javascript:popup_gedcom('ROLE_IN_EVENT')">?</A>)
+  <a href="interface.html#date_value">struct date_value</a> *date; (<A href="javascript:popup_gedcom('ENTRY_RECORDING_DATE')">?</A>)
+  <a href="#text">struct text</a> *text; 
+  char *quality; (<A href="javascript:popup_gedcom('CERTAINTY_ASSESSMENT')">?</A>)
+  <a href="#multimedia_link">struct multimedia_link</a> *mm_link; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#source_citation">struct source_citation</a> *next; 
+  <a href="#source_citation">struct source_citation</a> *previous; 
+}; 
+ 
+<a name="note_sub"><B>struct note_sub</B></a> { (<A href="javascript:popup_gedcom('NOTE_STRUCTURE')">?</A>)
+  char *text; (<A href="javascript:popup_gedcom('SUBMITTER_TEXT')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *reference; 
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#note_sub">struct note_sub</a> *next; 
+  <a href="#note_sub">struct note_sub</a> *previous; 
+}; 
+ 
+<a name="place"><B>struct place</B></a> { (<A href="javascript:popup_gedcom('PLACE_STRUCTURE')">?</A>)
+  char *value; (<A href="javascript:popup_gedcom('PLACE_VALUE')">?</A>)
+  char *place_hierarchy; (<A href="javascript:popup_gedcom('PLACE_HIERARCHY')">?</A>)
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+}; 
+ 
+<a name="multimedia_link"><B>struct multimedia_link</B></a> { (<A href="javascript:popup_gedcom('MULTIMEDIA_LINK')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *reference; 
+  char *form; (<A href="javascript:popup_gedcom('MULTIMEDIA_FORMAT')">?</A>)
+  char *title; (<A href="javascript:popup_gedcom('DESCRIPTIVE_TITLE')">?</A>)
+  char *file; (<A href="javascript:popup_gedcom('MULTIMEDIA_FILE_REFERENCE')">?</A>)
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#multimedia_link">struct multimedia_link</a> *next; 
+  <a href="#multimedia_link">struct multimedia_link</a> *previous; 
+}; 
+ 
+<a name="lds_event"><B>struct lds_event</B></a> { (<A href="javascript:popup_gedcom('LDS_INDIVIDUAL_ORDINANCE')">?</A>)
+  int event; 
+  char *event_name; 
+  char *date_status; (<A href="javascript:popup_gedcom('LDS_BAPTISM_DATE_STATUS')">?</A>)
+  <a href="interface.html#date_value">struct date_value</a> *date; (<A href="javascript:popup_gedcom('DATE_LDS_ORD')">?</A>)
+  char *temple_code; (<A href="javascript:popup_gedcom('TEMPLE_CODE')">?</A>)
+  char *place_living_ordinance; (<A href="javascript:popup_gedcom('PLACE_LIVING_ORDINANCE')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *family; 
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#lds_event">struct lds_event</a> *next; 
+  <a href="#lds_event">struct lds_event</a> *previous; 
+}; 
+ 
+<a name="user_ref_number"><B>struct user_ref_number</B></a> { 
+  char *value; (<A href="javascript:popup_gedcom('USER_REFERENCE_NUMBER')">?</A>)
+  char *type; (<A href="javascript:popup_gedcom('USER_REFERENCE_TYPE')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#user_ref_number">struct user_ref_number</a> *next; 
+  <a href="#user_ref_number">struct user_ref_number</a> *previous; 
+}; 
+ 
+<a name="change_date"><B>struct change_date</B></a> { (<A href="javascript:popup_gedcom('CHANGE_DATE_STRUCTURE')">?</A>)
+  <a href="interface.html#date_value">struct date_value</a> *date; (<A href="javascript:popup_gedcom('CHANGE_DATE')">?</A>)
+  char *time; (<A href="javascript:popup_gedcom('TIME_VALUE')">?</A>)
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+}; 
+ 
+<a name="event"><B>struct event</B></a> { (<A href="javascript:popup_gedcom('FAMILY_EVENT_STRUCTURE')">?</A>)
+  int event; 
+  char *event_name; 
+  char *val; 
+  char *type; (<A href="javascript:popup_gedcom('EVENT_DESCRIPTOR')">?</A>)
+  <a href="interface.html#date_value">struct date_value</a> *date; (<A href="javascript:popup_gedcom('DATE_VALUE')">?</A>)
+  <a href="#place">struct place</a> *place; 
+  <a href="#address">struct address</a> *address; 
+  char *phone[3]; (<A href="javascript:popup_gedcom('PHONE_NUMBER')">?</A>)
+  <a href="interface.html#age_value">struct age_value</a> *age; (<A href="javascript:popup_gedcom('AGE_AT_EVENT')">?</A>)
+  char *agency; (<A href="javascript:popup_gedcom('RESPONSIBLE_AGENCY')">?</A>)
+  char *cause; (<A href="javascript:popup_gedcom('CAUSE_OF_EVENT')">?</A>)
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#multimedia_link">struct multimedia_link</a> *mm_link; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="interface.html#age_value">struct age_value</a> *husband_age; 
+  <a href="interface.html#age_value">struct age_value</a> *wife_age; 
+  <a href="interface.html#xref_value">struct xref_value</a> *family; 
+  char *adoption_parent; (<A href="javascript:popup_gedcom('ADOPTED_BY_WHICH_PARENT')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#event">struct event</a> *next; 
+  <a href="#event">struct event</a> *previous; 
+}; 
+ 
+<a name="xref_list"><B>struct xref_list</B></a> { 
+  <a href="interface.html#xref_value">struct xref_value</a> *xref; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#xref_list">struct xref_list</a> *next; 
+  <a href="#xref_list">struct xref_list</a> *previous; 
+}; 
+ 
+<a name="personal_name"><B>struct personal_name</B></a> { (<A href="javascript:popup_gedcom('PERSONAL_NAME_STRUCTURE')">?</A>)
+  char *name; (<A href="javascript:popup_gedcom('NAME_PERSONAL')">?</A>)
+  char *prefix; (<A href="javascript:popup_gedcom('NAME_PIECE_PREFIX')">?</A>)
+  char *given; (<A href="javascript:popup_gedcom('NAME_PIECE_GIVEN')">?</A>)
+  char *nickname; (<A href="javascript:popup_gedcom('NAME_PIECE_NICKNAME')">?</A>)
+  char *surname_prefix; (<A href="javascript:popup_gedcom('NAME_PIECE_SURNAME_PREFIX')">?</A>)
+  char *surname; (<A href="javascript:popup_gedcom('NAME_PIECE_SURNAME')">?</A>)
+  char *suffix; (<A href="javascript:popup_gedcom('NAME_PIECE_SUFFIX')">?</A>)
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#personal_name">struct personal_name</a> *next; 
+  <a href="#personal_name">struct personal_name</a> *previous; 
+}; 
+ 
+<a name="pedigree"><B>struct pedigree</B></a> { 
+  char *pedigree; (<A href="javascript:popup_gedcom('PEDIGREE_LINKAGE_TYPE')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#pedigree">struct pedigree</a> *next; 
+  <a href="#pedigree">struct pedigree</a> *previous; 
+}; 
+ 
+<a name="family_link"><B>struct family_link</B></a> { (<A href="javascript:popup_gedcom('CHILD_TO_FAMILY_LINK')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *family; 
+  <a href="#pedigree">struct pedigree</a> *pedigree; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#family_link">struct family_link</a> *next; 
+  <a href="#family_link">struct family_link</a> *previous; 
+}; 
+ 
+<a name="association"><B>struct association</B></a> { (<A href="javascript:popup_gedcom('ASSOCIATION_STRUCTURE')">?</A>)
+  <a href="interface.html#xref_value">struct xref_value</a> *to; 
+  char *type; (<A href="javascript:popup_gedcom('RECORD_TYPE')">?</A>)
+  char *relation; (<A href="javascript:popup_gedcom('RELATION_IS_DESCRIPTOR')">?</A>)
+  <a href="#source_citation">struct source_citation</a> *citation; 
+  <a href="#note_sub">struct note_sub</a> *note; 
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#association">struct association</a> *next; 
+  <a href="#association">struct association</a> *previous; 
+}; 
+ 
+<a name="source_event"><B>struct source_event</B></a> { 
+  char *recorded_events; (<A href="javascript:popup_gedcom('EVENTS_RECORDED')">?</A>)
+  <a href="interface.html#date_value">struct date_value</a> *date_period; (<A href="javascript:popup_gedcom('DATE_PERIOD')">?</A>)
+  char *jurisdiction; (<A href="javascript:popup_gedcom('SOURCE_JURISDICTION_PLACE')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#source_event">struct source_event</a> *next; 
+  <a href="#source_event">struct source_event</a> *previous; 
+}; 
+ 
+<a name="source_description"><B>struct source_description</B></a> { 
+  char *call_number; (<A href="javascript:popup_gedcom('SOURCE_CALL_NUMBER')">?</A>)
+  char *media; (<A href="javascript:popup_gedcom('SOURCE_MEDIA_TYPE')">?</A>)
+  <a href="#user_data">struct user_data</a> *extra; 
+  <a href="#source_description">struct source_description</a> *next; 
+  <a href="#source_description">struct source_description</a> *previous; 
+}; 
+ 
+
+</PRE></CODE>
+<HR>
+
+<SMALL>Generated from: gom.h,v 1.19 2003/01/26 16:33:45 verthezp Exp</SMALL>
+</body>
+</html>

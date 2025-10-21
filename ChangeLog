@@ -1,0 +1,674 @@
+2003-02-02  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.90.0
+
+2003-02-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/compat.c, gedcom/gedcom.y, gedcom/gedcom_lex_common.c:
+	More EasyTree compatibility.
+
+	* gom/gom.c, gom/gom_internal.h: Better warning messages for context
+	mismatches.
+
+	* gedcom/compat.c, gedcom/gedcom.y, gedcom/gedcom_lex_common.c:
+	Added compatibility for PAF 4.
+
+	* include/gedcom.h.in, gedcom/compat.c: New function
+	gedcom_set_compat_options.
+
+2003-01-26  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/compat.c: Added compatibility for Family Origins.
+
+	* gedcom/gedcom.y: Allow empty CONT tags.
+
+	* include/gom.h, gom/*.c: Added functions to add, remove and move
+	substructs.
+
+	* gedcom/date.c (numbers_to_strings): Some checking of input.
+
+	* include/gedcom.h.in, gedcom/age.c, gedcom/date.c, gedcom/write.c:
+	Some const correctness fixes.
+
+	* gedcom/date.c (gedcom_parse_date): Put invalid date in phrase member.
+
+2003-01-25  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom.y: Make sure that a note record tag is never empty.
+
+	* gom/note_sub.c (sub_note_end): Bugfix in callback: parsed value can
+	be NULL.
+
+	* gedcom/gedcom.y: Bugfix in compatibility for address (ftree).
+
+	* gedcom/interface.c (gedcom_cast_error): Bugfix in error message.
+
+	* gom/gom.c: Second call of gom_parse_file or gom_new_model should
+	clean up model.
+
+	* gom/gom_modify.c (gom_set_string): Allow setting a string to NULL.
+
+	* gom/personal_name.c (write_names): Correction in containment of
+	tags.
+
+	* gedcom/encoding.c, gedcom/write.c, gedcom/encoding.state.c:
+	Implemented an encoding state.
+
+	* bin/gedcom-sanitize.c: Added program to convert to standard GEDCOM.
+
+2003-01-24  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/lds_event.c: Added some missing code for writing LSS events.
+
+2003-01-23  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/user_rec.c (write_user_data): Fixed a nasty corruption bug.
+
+2003-01-22  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom_date.y: Cleaned up error handling on dates.
+
+2003-01-18  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom_date.y: Compatibility added for different format of
+	double years.
+
+	* gedcom/date.c: Pass date values via pointers instead of on stack.
+
+2003-01-15  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/compat.c, gedcom/gedcom.y: Start with compatibility for PAF2.
+
+2003-01-14  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/compat.c: Reworked compatibility computation to take program
+	version into account.
+
+2003-01-12  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/gom_modify.c, gom/func_template.h, include/gom.h: Function to
+	move xref in a list.
+
+	* gom/*: Unlink xrefs properly when structs are deleted.
+
+2003-01-11  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/*, include/gom.h: Functions to add and remove xrefs in objects.
+
+	* gedcom/gedcom_1byte.lex (gedcom_check_token): Fix bug: line length
+	should be reset to 0.
+
+2003-01-04  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/compat.c, gedcom/gedcom.y: Some compatibility with PAF added.
+
+	* gedcom/multilex.c (determine_encoding): Recognize the UTF-8 byte
+	order mark.
+
+	* gom/change_date.c: Added functions to update timestamps in any
+	record.
+
+	* gedcom/compat.*, gedcom.y, gedcom_lex_common.c: Better separation
+	of compatibility handling.
+
+	* t/compat-*: Tests for compatibility handling.
+
+2003-01-03  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* bin/gedcom-check.c: Added program to check validity of a GEDCOM file.
+
+2003-01-02  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/*: Added functions to add and remove records.
+
+2002-12-30  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.20.0
+
+	* gedcom/write.c: Give warning if character set in HEAD.CHAR is not
+	the same as current character set (and force value).
+
+	* gom/header.c, gom/gom_modify.c: Added function
+	gom_header_update_timestamp and supporting functions.
+
+2002-12-29  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* configure.in, include/gedcom.h.in: Move to three-part version
+	numbers.
+
+	* m4/gedcom.m4: Major changes.
+
+2002-12-22  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom-config.in: New file.
+
+2002-12-21  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* libutf8 is changed to a shared library, and has now its own
+	package (see further ChangeLog in that directory).
+
+	* gedcom/date.c, gedcom/gedcom_date.*: New functions for handling
+	date values.
+
+2002-12-15  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/*.c, gedcom/write.c, gedcom/date.c, gedcom/age.c: Support for
+	writing age values and data values (rudimentary).
+
+	* gom/*.c, gedcom/write.c: Completed writing of strings and xrefs.
+
+2002-12-08  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/write.c: Writing long strings (with continuation), and
+	doubling of at characters.
+
+	* gedcom/gedcom.y, gedcom/buffer.*: Use safe buffer mechanism for
+	storing gedcom value (to avoid fixed buffer size).
+
+2002-12-07  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/*: Use complete concatenated text instead of concatenating the
+	texts itself.
+
+	* gedcom/gedcom.y: Pass complete concatenated text in end callback
+	(this causes a backward incompatibility in the end record callback!)
+
+2002-12-04  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/write.c, gom/gom.c: Beginnings of write support.
+
+2002-12-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/encoding.c (to_internal): Use the conv_buffer interface
+	from utf8/utf8-convert.c.
+
+2002-11-30  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* utf8/utf8-convert.c: More general conversion interface (extracted
+	from utf8-locale.c and gedcom/encoding.c).
+
+2002-11-24  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/message.c: Extracted safe buffer mechanism to buffer.c
+	for reuse.
+
+2002-11-22  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/gom_modify.c: Check whether given strings are valid.
+
+	* utf8/utf8.c: Functions for checking UTF-8 strings and computing
+	length.
+
+2002-11-04  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/multilex.c, all: Use dgettext instead of gettext => no more
+	need of textdomain().
+
+2002-11-03  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/multilex.c (gedcom_parse_file): Move setlocale call to
+	gedcom_init, make strdup of saved textdomain (to avoid corruption).
+
+	* all: Removed support for dmalloc (valgrind is much better and doesn't
+	require changing the sources).
+
+	* m4/gedcom.m4: Added m4 macro for configure.in support.
+
+2002-11-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom_*.lex: A pointer with only one character between the
+	at signs is also valid.
+
+	* gedcom/xref.c (is_valid_pointer): New function (also checks for
+	maximum size).
+
+	* include/gom.h: Added links to the definitions in the Gedcom standard.
+
+	* all: update of documentation
+
+2002-10-30  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom_lex_common.c, gedcom/multilex.c: Fix for line numbering
+	bug (bug 613480).
+
+2002-10-28  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.17.2
+	  This is another test release
+
+2002-10-27  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/Makefile.am: Put generated lex and yacc files also in dist.
+
+	* doc/Makefile.am: Put generated file gomxref.html also in dist (so
+	perl isn't needed at make-time).
+
+	* utf8/utf8-locale.c (convert_utf8_to_locale): Set conv_fails on total
+	conversion failure too.
+
+	* all: Further small portability fixes.
+
+2002-10-26  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* t/output/*: Reference output for the tests; compare the actual test
+	output to these files.
+
+2002-10-23  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* Makefile.inc: Portability fix: 'if ! diff ...' isn't always supported
+	by sh.
+
+	* include/Makefile.am: Portability fix: grep isn't always understanding
+	full regex syntax.
+
+	* utf8/Makefile.am, configure.in: Only link in libcharset if libiconv
+	is not used.
+
+2002-10-21  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: Further portability fixes to Makefile.am and such.
+
+2002-10-20  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* */Makefile.am: Fixes for using included gettext.
+
+	* intl/Makefile.in: Hack for generating libtool convenience library
+	instead of shared library.
+
+	* README: Modify at dist instead of via configure.in (GNU make is used
+	anyway).
+
+	* intl/*: Upgraded to gettext 0.10.38 (to have extra functions, such
+	as bind_textdomain_codeset).
+
+2002-10-14  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/encoding.c (to_internal): Add ICONV_CONST for portability.
+
+	* utf8/utf8-locale.c: Add forgotten header string.h
+
+2002-10-13  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* Makefile: Require GNU make to be used -> normal makefile is then
+	GNUmakefile in top directory.
+
+	* README, doc/index.html: Generate from *.in via configure (for
+	portability).
+
+	* utf8/utf8-locale.c, utf8/libcharset/: Use locale_charset instead of
+	nl_langinfo directly, for portability.
+
+2002-10-05  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.17.1
+	  This is a test release
+
+2002-10-04  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* iconv/libiconv/*: libiconv changes for ANSEL encoding.
+
+2002-10-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* ansel/ANSI_Z39.47.c: Fixes to ansel decoding and (mostly) encoding.
+
+2002-09-28  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: Portability fixes and support for libiconv.
+
+2002-09-22  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/xref.c, include/gedcom.h.in: Added functions to retrieve, add,
+	link/unlink and delete cross-references.
+
+	* gedcom/gedcom_1byte.lex, gedcom/gedcom_lex_common.c: Added a function
+	to check whether a (UTF-8) string is a valid token; bypass iconv
+	conversion for this.
+
+	* gedcom/*: Fixed memory leaks reported by valgrind.
+
+2002-09-21  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* t/standalone.c: Close outfile *after* the last output is done...
+
+	* gedcom/gedcom_*.lex, gedcom/gedcom_lex_common.c: Workaround for
+	memory leak in flex.
+
+	* gedcom/encoding.c: Clean up environment at exit.
+
+2002-09-15  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom.h.in, gedcom/*, gom/*: Take care of const correctness.
+
+2002-09-13  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* include/gom.h: Add include file to be able to recognize __BEGIN_DECLS
+
+	* doc/make_gom_xref: Corrected 'Generated from' string.
+
+2002-09-12  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.17
+
+	* gedcom/gedcom_lex_common.c, gedcom/interface.c, gedcom/message.c:
+	Fixes for internationalization.
+
+	* doc/make_gom_xref, doc/usage.html: Documentation for the gedcom
+	object model.
+
+2002-09-09  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gom/*: First check-in of gedcom object model.
+
+2002-09-08  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: More thorough error checking on library calls.
+
+2002-09-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom.y: Use XREF_ANY for an association instead of XREF_INDI
+
+	* include/gedcom.h.in, gedcom/xref.c: Added XREF_ANY for when type of
+	xref_value is not known yet.  Added function gedcom_get_by_xref.
+
+2002-08-28  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/interface.c: A little more checking (for duplicate
+	registration).
+
+	* gedcom/age.c, gedcom/age.h, gedcom/gedcom.y, include/gedcom.h,
+	t/standalone.c:
+	Parsing age values.
+
+2002-08-25  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/xref.c: Clean up xref table at exit (not after check), or when
+	new file is parsed.
+
+	* include/gedcom.h.in, gedcom/interface.c, t/standalone.c: Added
+	extra argument to callback functions: the record/element identifier.
+
+2002-08-16  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/compat.*, gedcom/gedcom.y: Moved all compatibility handling
+	functions to compat.c; let default charset depend on the program.
+
+	* t/test_script: Check for a core file.
+
+	* release 0.16
+
+	* t/dates.test, t/encoding_error.test: New tests.
+
+	* t/utf8-locale.c: Remove conversion warning at compilation.
+
+	* t/test_script: Enhancements to use script outside 'make check'.
+
+	* t/standalone.c, t/bogus.test: Parse bogus file only if enabled
+	via option.
+
+	* t/Makefile.am: Added rule to be able to perform single tests.
+
+	* gedcom/encoding.c, gedcom/gedcom_lex_common.c: Handle illegal
+	characters in to_internal (to avoid crashes).
+
+	* Lots of files: Add compability for Lifelines.
+
+	* Makefile.inc, gedcom/Makefile.am, gedcom/gedcom_lex_common.c,
+	gedcom/gedcom_date.lex:
+	Added rule that can help to avoid unnecessary recompilation of lex
+	files.  It generates a new include file only when necessary: use this
+	one in lex files.
+
+2002-04-08  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* t/minimal.test: Added test on a minimal GEDCOM file.
+
+2002-03-27  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.15
+
+	* gedcom/multilex.c: Make the use of gedcom_init() mandatory.
+
+2002-03-17  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom.y: Graceful error handling on bogus input.
+
+	* t/path1.test, t/path2.test, t/pathtest.c: New tests (for the
+	GCONV_PATH environment variable).
+
+	* Moved the test program to the t subdirectory.
+
+	* standalone.c, doc/usage.html: Use of the gedcom_init() function.
+
+	* gedcom/multilex.c, gedcom/encoding.*: Added gedcom_init() function
+	to avoid problem with GCONV_PATH environment variable (see note in
+	gedcom/encoding.c).
+
+2002-01-22  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom.y, gedcom/compat.c, gedcom/compat.h: Added
+	compatibility handling for ftree.
+
+2002-01-20  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.14
+
+	* restructured the test setup
+
+2002-01-19  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom.h: Renamed to gedcom.h.in: at configure, the VERSION
+	variables are substituted and the file gedcom.h is written
+
+	* utf8-locale.c: Added parameter to conversion from UTF-8 to locale,
+	to return number of conversion failures.
+
+2002-01-16  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/xref.c: Make sure that the 'string' member of an xref always
+	contains a valid string.
+
+	* gedcom/gedcom.y: in use of INVALID_TAG: tag is struct instead of
+	simple string.
+
+	* gedcom/multilex.c (gedcom_parse_file): setlocale returns a string
+	in static storage, so must use strdup and free afterwards.
+
+2002-01-15  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/encoding.c: Separate the modification of GCONV_PATH from the
+	rest of the initialization, and let it be called before main (necessary
+	because iconv_open will only look at GCONV_PATH once, and e.g. GTK
+	calls iconv_open very early).
+
+	* gedcom/gedcom.y: Don't allow the parser to continue if the conversion
+	context couldn't be opened, even if IGNORE_ERRORS.
+
+	* gedcom/multilex.c (gedcom_parse_file): Save the old locale (in case
+	the application had set it).
+
+2002-01-13  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* utf8-locale.c: Example implementation for conversion UTF-8 to
+	locale.
+
+2002-01-12  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* more documentation...
+
+2002-01-10  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* doc/parser.html: Start of character set explanation.
+
+	* enhancements to Makefiles for documentation.
+
+	* gedcom/Makefile.am, gedcom/gedcom_lex_common.c: Some bugfixes for the
+	standalone lexers.
+
+2002-01-05  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.13
+
+	* xref.*, gedcom.y, gedcom.h: Parse and process cross-references.
+
+	* encoding.c: Bugfixes in using the hash implementation of kazlib.
+
+	* interface.h: Add a variable to the GEDCOM_MAKE_* macros, to be able
+	to have two of these macros in one statement.  Move GEDCOM_MAKE_DATE
+	to date.h.
+
+2002-01-03  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom.y: Bugfix for context handling of tags that are grouped in
+	the yacc file.
+
+	* gedcom.y, gedcom.h, standalone.c, interface.*: Record can also
+	have a value (e.g. the NOTE record), so extra value necessary on
+	start record callback.
+
+	* gedcom.y: Correct value of NOTE element (opt_line_item was missing
+	an action).
+
+2002-01-02  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* lots of files: Pass the parsed tag value (integer) together with
+	the string value in the callbacks.  For this, a separate header is
+	auto-generated, containing the #defines from bison.
+
+	* t/test_script: Return exit code from testgedcom.
+
+	* gedcom/hash.*, gedcom/encoding.*: Use hash implementation from
+	kazlib (see AUTHORS for pointer).
+
+2001-12-31  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.12
+
+2001-12-30  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: Added some initial documentation.
+
+	* gedcom/gedcom.y: Completed the calling of callbacks.
+
+2001-12-29  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/gedcom_date.y: Added graceful fallback for date parse errors:
+	put everything as a 'date phrase'.
+
+2001-12-28  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom_date.*, date.*: Parsing dates via a separate yacc parser.
+
+	* gedcom/calendar/*: Calendar routines by Scott E. Lee
+
+	* gedcom.y: Added some more callbacks (not complete yet)
+
+2001-12-23  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* include/gedcom.h: Add some declarations so that the external header
+	can be used in C++ programs.
+
+2001-12-22  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* Makefile.am, gedcom/Makefile.am: Don't link libgedcom with libintl:
+	leave that to the applications.
+
+2001-12-15  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.11
+	Moved CVS repository to sourceforge.net (project gedcom-parse)
+
+2001-12-10  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: Use of gettext.
+
+	* gedcom/Makefile.am: Support for the lexer test programs.
+
+	* all: Moved to LGPL license.
+
+2001-12-09  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom/encoding.c (init_encodings): Put data directory of libgedcom
+	in the GCONV_PATH environment variable (for the ANSEL encoding).
+
+	* release 0.10
+
+	* all: Full move to autoconf/automake.
+
+2001-12-08  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: Further specification of interface: message handler.
+	Start of specification of callbacks.
+
+2001-12-03  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* Uploaded release 0.9 to genes at SourceForge.
+
+2001-12-02  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.9
+
+	* gedcom.h, Makefile: Add dmalloc testability.
+
+	* all: Reset the state properly for parsing new files.
+
+	* release 0.8
+
+	* encoding.c: Specify explicitly the output buffer for to_internal:
+	used to put pointers and tags in different output buffer.
+
+	* gedcom_lex_common.c: New file containing all lex actions (is common
+	  for all lexers).  Better checks for maximum lengths.
+
+2001-12-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom_*.lex: Return level number together with OPEN token.
+
+2001-11-27  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* gedcom.enc: Adapt default iconv encoding names (to also support
+	glibc-2.1.x).
+
+2001-11-25  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* all: added proper copyright notice (copyright to the Genes
+	Development Team)
+
+	* release 0.7
+	  Uploaded to genes at SourceForge.
+
+	* all: general cleanup, making sure everything is in CVS
+
+2001-11-24  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.6
+
+	* ANSEL decoding added.
+
+2001-11-23  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.5
+
+	* Now with encoding mapping via configuration file.
+
+2001-11-16  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.4
+
+	* Now with full unicode support.
+
+2001-11-04  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.3
+
+	* Compatibility mode implemented.
+
+2001-11-01  Peter Verthez  <Peter.Verthez@advalvas.be>
+
+	* release 0.2
+
+	* Now with full error handling of tags and subtags.
+
+	* release 0.1
+
+	* Now covering the entire GEDCOM spec, without error handling.
+

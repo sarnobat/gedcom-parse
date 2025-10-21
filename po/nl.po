@@ -1,0 +1,714 @@
+# The Gedcom parser library.
+# Copyright (C) 2001 The Genes Development Team
+# Peter Verthez <Peter.Verthez@advalvas.be>, 2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gedcom-parse 0.90.0\n"
+"POT-Creation-Date: 2003-02-02 16:26+0100\n"
+"PO-Revision-Date: 2003-02-02 15:50+0100\n"
+"Last-Translator: Peter Verthez <Peter.Verthez@advalvas.be>\n"
+"Language-Team: Dutch <nl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# PLEASE KEEP THE CHARSET AS UTF-8 !!
+#: gedcom/encoding.c:69
+#, c-format
+msgid "Duplicate entry found for encoding '%s', ignoring"
+msgstr "Dubbele definitie gevonden voor de codering '%s', wordt genegeerd"
+
+#: gedcom/encoding.c:105
+#, c-format
+msgid "No encoding defined for '%s'"
+msgstr "Geen codering gedefinieerd voor '%s'"
+
+#: gedcom/encoding.c:189
+msgid "Could not register path cleanup function"
+msgstr "Kon functie voor vrijgeven van padnaam niet registreren"
+
+#: gedcom/encoding.c:204
+msgid "Could not register encoding cleanup function"
+msgstr "Kon functie voor vrijgeven van codering informatie niet registreren"
+
+#: gedcom/encoding.c:218
+#, c-format
+msgid "Could not open encoding configuration file '%s': %s"
+msgstr "Kon configuratie bestand voor codering '%s' niet openen: %s"
+
+#: gedcom/encoding.c:225
+#, c-format
+msgid "Line too long in encoding configuration file '%s'"
+msgstr "Lijn te lang in configuratie bestand voor coderingen '%s'"
+
+#: gedcom/encoding.c:235
+#, c-format
+msgid "Missing data in encoding configuration file '%s'"
+msgstr "Ontbrekende gegevens in configuratie bestand voor coderingen '%s'"
+
+#: gedcom/encoding.c:244
+#, c-format
+msgid "Error closing file '%s': %s"
+msgstr "Fout bij het sluiten van het bestand '%s': %s "
+
+#: gedcom/encoding.c:262
+#, c-format
+msgid "Error opening conversion context for encoding %s: %s"
+msgstr "Fout bij het openen van een conversiecontext voor de codering %s: %s"
+
+#: gedcom/encoding_state.c:82
+msgid "Unicode cannot be encoded into one byte"
+msgstr "Unicode kan niet geëncodeerd worden in één byte"
+
+#: gedcom/gedcom.y:214
+#, c-format
+msgid "The tag '%s' is mandatory within '%s', but missing"
+msgstr "De tag '%s' is verplicht binnen '%s', maar ontbreekt"
+
+#: gedcom/gedcom.y:238
+#, c-format
+msgid "The tag '%s' can maximally occur %d time(s) within '%s'"
+msgstr "De tag '%s' mag maximum %d keer voorkomen binnen '%s'"
+
+#: gedcom/gedcom.y:245
+#, c-format
+msgid "The tag '%s' is not a valid tag within '%s'"
+msgstr "De tag '%s' is niet geldig binnen '%s'"
+
+#: gedcom/gedcom.y:250
+#, c-format
+msgid "The tag '%s' is not a valid top-level tag"
+msgstr "De tag '%s' is geen geldige tag op het top niveau"
+
+#: gedcom/gedcom.y:1438 gedcom/gedcom.y:3971
+msgid "Missing value"
+msgstr "Waarde ontbreekt"
+
+#: gedcom/gedcom.y:3876 gedcom/gedcom.y:3913
+#, c-format
+msgid "Undefined tag (and not a valid user tag): %s"
+msgstr "Ongedefieerde tag (en geen geldige gebruikerstag): %s"
+
+#: gedcom/gedcom.y:3939
+msgid "Standard tag not allowed in user section"
+msgstr "Standaard tag niet toegelaten in een gebruikerssectie"
+
+#. empty
+#: gedcom/gedcom.y:3960
+msgid "Missing pointer"
+msgstr "Verwijzing ontbreekt"
+
+#: gedcom/gedcom.y:4061
+msgid "Missing cross-reference"
+msgstr "Naam voor verwijzingen ontbreekt"
+
+#: gedcom/gedcom.y:4226
+msgid "Internal error: count level mismatch"
+msgstr "Interne fout: niveau fout"
+
+#: gedcom/gedcom.y:4230
+msgid "Internal error: count array overflow"
+msgstr "Interne fout: overloop van de telrij"
+
+#: gedcom/gedcom.y:4237
+msgid "Internal error: count array calloc error"
+msgstr "Interne fout: allocatiefout op de telrij"
+
+#: gedcom/gedcom.y:4283
+msgid "Internal error: count array underflow"
+msgstr "Interne fout: underflow van de telrij"
+
+#. On error: put entire string in 'phrase' member
+#. as fallback
+#: gedcom/date.c:426 gedcom/gedcom_date.y:129
+msgid "Putting date in 'phrase' member"
+msgstr "Datum wordt in 'phrase' veld gezet"
+
+#: gedcom/gedcom_date.y:340
+#, c-format
+msgid "Year is missing: '%s'"
+msgstr "Jaartal niet aanwezig: '%s'"
+
+#: gedcom/gedcom_date.y:345
+#, c-format
+msgid "Month is missing: '%s'"
+msgstr "Maand niet aanwezig: '%s'"
+
+#: gedcom/gedcom_date.y:354
+#, c-format
+msgid "Too many characters in day '%s'"
+msgstr "Te veel karakters in dag '%s'"
+
+#: gedcom/gedcom_date.y:365
+#, c-format
+msgid "Not a valid day number: '%s'"
+msgstr "Geen geldig dag nummer: '%s'"
+
+#: gedcom/gedcom_date.y:390
+#, c-format
+msgid "Not a valid month for the given calendar: '%s'"
+msgstr "Geen geldige maand voor de gegeven kalender: '%s'"
+
+#: gedcom/gedcom_date.y:403
+#, c-format
+msgid "Too many characters in year '%s'"
+msgstr "Te veel karakters in jaar '%s'"
+
+#: gedcom/gedcom_date.y:413
+#, c-format
+msgid "Year after slash should be two digits: '%s/%s'"
+msgstr "Jaartal na de schuine streep moet twee cijfers zijn: '%s/%s'"
+
+#: gedcom/gedcom_date.y:422
+#, c-format
+msgid "Year after slash should be following year: '%s/%s'"
+msgstr "Jaartal na de schuine streep moet het volgende jaar zijn: '%s/%s'"
+
+#: gedcom/gedcom_date.y:430
+#, c-format
+msgid "Too many characters in year '%s/%s'"
+msgstr "Te veel karakters in jaar '%s/%s'"
+
+#: gedcom/gedcom_date.y:446
+#, c-format
+msgid "Not a valid year: '%s'"
+msgstr "Geen geldig jaar: '%s'"
+
+#: gedcom/gedcom_date.lex:43
+msgid "Date token stack overflow"
+msgstr "Datum token stack overloop"
+
+#: gedcom/gedcom_date.lex:53
+msgid "Unexpected input"
+msgstr "Onverwachte invoer"
+
+#: gedcom/gedcom_date.lex:58
+msgid "Unknown calendar type"
+msgstr "Ongekend kalender type"
+
+#: gedcom/gedcom_lex_common.c:99
+#, c-format
+msgid "Line too long, max %d characters allowed"
+msgstr "Lijn te lang, maximum %d karakters toegestaan"
+
+#: gedcom/gedcom_lex_common.c:105
+msgid "Level number with leading zero not allowed"
+msgstr "Niveau mag niet met een nul beginnen"
+
+#: gedcom/gedcom_lex_common.c:110
+#, c-format
+msgid "Level number out of range [0..%d]"
+msgstr "Niveau buiten de toegelaten marge [0..%d]"
+
+#: gedcom/gedcom_lex_common.c:115
+#, c-format
+msgid "GEDCOM level number is %d higher than previous"
+msgstr "GEDCOM niveau is %d hoger dan vorige"
+
+#: gedcom/gedcom_lex_common.c:121
+#, c-format
+msgid "Tag '%s' too long, max %d characters allowed"
+msgstr "Type '%s' te lang, maximum %d karakters toegestaan"
+
+#: gedcom/gedcom_lex_common.c:127
+#, c-format
+msgid "Invalid character for encoding: '%s' (0x%02x)"
+msgstr "Ongeldig karakter voor encodering: '%s' (0x%02x)"
+
+#: gedcom/gedcom_lex_common.c:132
+#, c-format
+msgid "Pointer '%s' too long, max %d characters allowed"
+msgstr "Verwijzing '%s' te lang, maximum %d karakters toegestaan"
+
+#: gedcom/gedcom_lex_common.c:138
+msgid "'@' character should be written as '@@' in values"
+msgstr "'@' karakter moet geschreven worden als '@@' in waarden"
+
+#: gedcom/gedcom_lex_common.c:143
+msgid "Tab character is not allowed in values"
+msgstr "Tab karakter is niet toegelaten in waarden"
+
+#: gedcom/gedcom_lex_common.c:148
+#, c-format
+msgid "Unexpected character: '%s' (0x%02x)"
+msgstr "Onverwacht karakter: '%s' (0x%02x)"
+
+#: gedcom/multilex.c:75
+#, c-format
+msgid "Error positioning input file: %s"
+msgstr "Fout bij het zoeken in het invoerbestand: %s"
+
+#: gedcom/multilex.c:86 gedcom/multilex.c:118
+#, c-format
+msgid "Error reading from input file: %s"
+msgstr "Fout bij het lezen van het invoerbestand: %s"
+
+#: gedcom/multilex.c:126 gedcom/multilex.c:132
+msgid "Unknown encoding, falling back to one-byte"
+msgstr "Ongekende codering, valt terug op één-byte"
+
+#: gedcom/multilex.c:160
+msgid "Internal error: GEDCOM parser not initialized"
+msgstr "Interne fout: GEDCOM verwerker niet geïnitializeerd"
+
+#: gedcom/multilex.c:165
+#, c-format
+msgid "Could not open file '%s': %s"
+msgstr "Kon bestand '%s' niet openen: %s"
+
+#: gedcom/message.c:64
+#, c-format
+msgid "Warning on line %d: "
+msgstr "Waarschuwing op lijn %d: "
+
+#: gedcom/message.c:66
+msgid "Warning: "
+msgstr "Waarschuwing: "
+
+#: gedcom/message.c:83
+#, c-format
+msgid "Error on line %d: "
+msgstr "Fout op lijn %d: "
+
+#: gedcom/message.c:85
+msgid "Error: "
+msgstr "Fout: "
+
+#: gedcom/buffer.c:64 gedcom/message.c:97 gom/gom.c:221
+#, c-format
+msgid "Could not allocate memory at %s, %d"
+msgstr "Kon geen geheugen toewijzen in %s, %d"
+
+#: gedcom/interface.c:36
+msgid "Internal error: Duplicate registration for default callback"
+msgstr "Interne fout: Dubbele registratie voor default callback"
+
+#: gedcom/interface.c:46
+#, c-format
+msgid "Internal error: Duplicate registration for record type %d"
+msgstr "Interne fout: Dubbele registratie voor record type %d"
+
+#: gedcom/interface.c:58
+#, c-format
+msgid "Internal error: Duplicate registration for element type %d"
+msgstr "Interne fout: Dubbele registratie voor element type %d"
+
+#: gedcom/interface.c:106
+msgid "null value"
+msgstr "geen waarde"
+
+#: gedcom/interface.c:107
+msgid "character string"
+msgstr "karakterrij"
+
+#: gedcom/interface.c:108
+msgid "date"
+msgstr "datum"
+
+#: gedcom/interface.c:109
+msgid "age"
+msgstr "leeftijd"
+
+#: gedcom/interface.c:110
+msgid "cross-reference"
+msgstr "verwijzing"
+
+#: gedcom/interface.c:126
+#, c-format
+msgid "Wrong cast of value in file %s, at line %d: %s instead of %s"
+msgstr ""
+"Verkeerde type-omzetting van een waarde in bestand %s, op lijn %d: %s in "
+"plaats van %s"
+
+#: gedcom/xref.c:33
+msgid "nothing"
+msgstr "niets"
+
+#: gedcom/xref.c:34
+msgid "a family"
+msgstr "een familie"
+
+#: gedcom/xref.c:35
+msgid "an individual"
+msgstr "een individu"
+
+#: gedcom/xref.c:36
+msgid "a note"
+msgstr "een nota"
+
+#: gedcom/xref.c:37
+msgid "a multimedia object"
+msgstr "een multimedia object"
+
+#: gedcom/xref.c:38
+msgid "a source repository"
+msgstr "een bronverzameling"
+
+#: gedcom/xref.c:39
+msgid "a source"
+msgstr "een bron"
+
+#: gedcom/xref.c:40
+msgid "a submitter"
+msgstr "een indiener"
+
+#: gedcom/xref.c:41
+msgid "a submission record"
+msgstr "een indieningsbeschrijving"
+
+#: gedcom/xref.c:42
+msgid "an application-specific record"
+msgstr "een toepassingsafhankelijk gegeven"
+
+#: gedcom/xref.c:116
+msgid "Could not register xref cleanup function"
+msgstr "Kon functie om kruisverwijzingen te verwijderen niet registreren"
+
+#: gedcom/xref.c:134
+#, c-format
+msgid "Cross-reference %s used on line %d is not defined"
+msgstr "Verwijzing %s gebruikt op lijn %d is niet gedefinieerd"
+
+#: gedcom/xref.c:139
+#, c-format
+msgid "Cross-reference %s defined on line %d is never used"
+msgstr "Verwijzing %s gedefinieerd op lijn %d is nergens gebruikt"
+
+#: gedcom/xref.c:187
+#, c-format
+msgid "Cross-reference %s previously defined as pointer to %s, on line %d"
+msgstr ""
+"Verwijzing %s is voorheen gedefinieerd als een verwijzing naar %s, op lijn %d"
+
+#: gedcom/xref.c:192 gedcom/xref.c:337
+#, c-format
+msgid "Cross-reference %s previously defined as pointer to %s"
+msgstr "Verwijzing %s is voorheen gedefinieerd als een verwijzing naar %s"
+
+#: gedcom/xref.c:199
+#, c-format
+msgid "Cross-reference %s previously used as pointer to %s, on line %d"
+msgstr ""
+"Verwijzing %s is voorheen gebruikt als een verwijzing naar %s, op lijn %d"
+
+#: gedcom/xref.c:204
+#, c-format
+msgid "Cross-reference %s previously used as pointer to %s"
+msgstr "Verwijzing %s is voorheen gebruikt als een verwijzing naar %s"
+
+#: gedcom/xref.c:258 gedcom/xref.c:278 gedcom/xref.c:302 gedcom/xref.c:326
+#: gedcom/xref.c:357
+#, c-format
+msgid "String '%s' is not a valid cross-reference key"
+msgstr "Karakterrij '%s' is geen geldige verwijzing"
+
+#: gedcom/xref.c:283
+#, c-format
+msgid "Cross-reference %s already exists"
+msgstr "Verwijzing %s bestaat al"
+
+#: gedcom/xref.c:307 gedcom/xref.c:331 gedcom/xref.c:362
+#, c-format
+msgid "Cross-reference %s not defined"
+msgstr "Verwijzing %s is niet gedefinieerd"
+
+#: gedcom/xref.c:367
+#, c-format
+msgid "Cross-reference %s still in use"
+msgstr "Verwijzing %s wordt nog gebruikt"
+
+#: gedcom/compat.c:168
+#, c-format
+msgid "Enabling compatibility with '%s', version %d"
+msgstr "Compatibiliteit met '%s', versie %d wordt aangezet"
+
+#: gedcom/compat.c:171
+#, c-format
+msgid "Enabling compatibility with '%s'"
+msgstr "Compatibiliteit met '%s' wordt aangezet"
+
+#: gedcom/compat.c:281
+#, c-format
+msgid "Adding link to submitter record with xref '%s'"
+msgstr "Verwijzing naar indiener record met verwijzing '%s' wordt toegevoegd"
+
+#: gedcom/compat.c:428
+#, c-format
+msgid "Header change time '%s' lost in the compatibility (out of context)"
+msgstr ""
+"Laatste tijd van verandering van de hoofding '%s' ging verloren in de "
+"uitwisselbaarheid (buiten context)"
+
+#: gedcom/compat.c:468
+#, c-format
+msgid "Country '%s' lost in the compatibility (out of context)"
+msgstr "Land '%s' verloren in de compatibilities (buiten context)"
+
+#: gedcom/compat.c:531
+#, c-format
+msgid "Converting 5.5.1 tag '%s' to standard 5.5 user tag '%s'"
+msgstr "5.5.1 tag '%s' wordt omgezet naar standaard 5.5 gebruikerstag '%s'"
+
+#: gedcom/compat.c:552
+#, c-format
+msgid "Adding link to family record with xref '%s'"
+msgstr "Verwijzing naar familierecord met verwijzing '%s' wordt toegevoegd"
+
+#: gedcom/compat.c:592
+#, c-format
+msgid "Converting non-standard tag '%s' to user tag '%s'"
+msgstr "Niet-standaard tag '%s' wordt omgezet naar gebruikerstag '%s'"
+
+#: gedcom/compat.c:744
+#, c-format
+msgid "Converting undefined tag '%s' to user tag '%s'"
+msgstr "Ongedefieerde tag '%s' wordt omgezet naar gebruikerstag '%s'"
+
+#: gedcom/compat.c:761
+#, c-format
+msgid "Converting invalidly used tag '%s' to user tag '%s'"
+msgstr "Ongeldig gebruikte tag '%s' wordt omgezet naar gebruikerstag '%s'"
+
+#: gedcom/write.c:85
+msgid "Line too long"
+msgstr "Lijn te lang"
+
+#: gedcom/write.c:98
+#, c-format
+msgid "Error converting output string: %s (%d conversion failures)"
+msgstr ""
+"Fout in het omzetten van de uitvoerkarakterrij: %s (%d omzettingsfouten)"
+
+#: gedcom/write.c:111
+#, c-format
+msgid "Forcing HEAD.CHAR value to '%s'"
+msgstr "HEAD.CHAR waarde wordt geforceerd op '%s'"
+
+#: gedcom/write.c:141
+#, c-format
+msgid "The tag %s doesn't support newlines"
+msgstr "De tag %s ondersteunt geen regelterugloop"
+
+#: gedcom/write.c:206
+#, c-format
+msgid "Could not open encoding '%s' for writing: %s"
+msgstr "Kon codering '%s' niet openen om te schrijven: %s"
+
+#: gedcom/write.c:214
+#, c-format
+msgid "Could not open file '%s' for writing: %s"
+msgstr "Kon bestand '%s' niet openen om te schrijven: %s"
+
+#: gedcom/write.c:231
+msgid "Byte order mark configured, but not relevant"
+msgstr "Byte orde teken geconfigureerd, maar niet relevant"
+
+#: gedcom/write.c:262
+#, c-format
+msgid "Not a valid tag: %d"
+msgstr "Geen geldige tag: %d"
+
+#: gedcom/write.c:267
+#, c-format
+msgid "The element or record type '%s' requires a specific tag for writing"
+msgstr ""
+"Het element of record type '%s' vereist een specifieke tag om te schrijven"
+
+#: gedcom/write.c:280
+#, c-format
+msgid "Wrong data type for writing element or record type '%s'"
+msgstr "Verkeerd data type om element or record type '%s' te schrijven"
+
+#: gedcom/write.c:298
+#, c-format
+msgid "Parent %d not found during write of %d"
+msgstr "Context %d niet gevonden bij het schrijven van %d"
+
+#: gedcom/age.c:64
+msgid "Number out of range in age"
+msgstr "Niveau buiten de toegelaten marge in leeftijd"
+
+#: gedcom/age.c:75
+msgid "Duplicate year indication in age"
+msgstr "Dubbele jaar indicatie in leeftijd"
+
+#: gedcom/age.c:83
+msgid "Duplicate month indication in age"
+msgstr "Dubbele maand indicatie in leeftijd"
+
+#: gedcom/age.c:91
+msgid "Duplicate day indication in age"
+msgstr "Dubbele dag indicatie in leeftijd"
+
+#: gedcom/age.c:96
+#, c-format
+msgid "Unrecognized indication in age: '%s'"
+msgstr "Ongekende indicatie in leeftijd: '%s'"
+
+#: gedcom/age.c:151
+msgid "Unrecognized age format"
+msgstr "Ongekend leeftijd formaat"
+
+#: gedcom/date.c:150
+msgid "Cannot compute SDN for unknown calendar type"
+msgstr "Kan SDN niet berekenen voor ongekend kalendertype"
+
+#: gedcom/date.c:174
+msgid "Year has to be given in bounded date"
+msgstr "Het jaar moet opgegeven worden voor een begrensde datum"
+
+#: gedcom/date.c:185 gedcom/date.c:194
+#, c-format
+msgid "Error converting date: year %d, month %d, day %d"
+msgstr "Fout bij het converteren van de datum: jaar %d, maand %d, dag %d"
+
+#: gedcom/date.c:213
+msgid "Cannot compute from SDN for unknown calendar type"
+msgstr "Kan niet vanuit SDN berekenen voor ongekend kalendertype"
+
+#: gedcom/date.c:221
+msgid "SDN 1 should be bigger than zero"
+msgstr "SDN 1 moet groter dan nul zijn"
+
+#: gedcom/date.c:228
+msgid "SDN 1 isn't a valid date in the given calendar"
+msgstr "SDN 1 is geen geldige datum in de gegeven kalender"
+
+#: gedcom/date.c:235
+msgid "SDN 2 should be -1 for exact dates"
+msgstr "SDN 2 moet -1 zijn voor exacte datums"
+
+#: gedcom/date.c:241
+msgid "SDN 2 should be bigger than zero"
+msgstr "SDN 2 moet groter dan nul zijn"
+
+#: gedcom/date.c:245
+msgid "SDN 2 should be bigger than SDN 1"
+msgstr "SDN 2 moet groter zijn dan SDN 1"
+
+#: gedcom/date.c:252
+msgid "SDN 2 isn't a valid date in the given calendar"
+msgstr "SDN 2 is geen geldige datum in de gegeven kalender"
+
+#: gedcom/date.c:273
+msgid "SDN1/SDN2 isn't a bounded date"
+msgstr "SDN1/SDN2 is geen begrensde datum"
+
+#: gedcom/date.c:299
+msgid "Cannot compute months for unknown calendar type"
+msgstr "Kan maand niet berekenen voor ongekend kalendertype"
+
+#: gedcom/date.c:332
+msgid "Cannot compute month names for unknown calendar type"
+msgstr "Kan maandnaam niet berekenen voor ongekend kalendertype"
+
+#: gedcom/date.c:413
+#, c-format
+msgid "Empty value changed to '%s'"
+msgstr "Lege waarde veranderd naar '%s'"
+
+#: gedcom/date.c:435
+msgid "Date is not normalized: some fields are invalid"
+msgstr "Datum is niet genormalizeerd: sommige velden zijn ongeldig"
+
+#: gedcom/buffer.c:59
+msgid "Could not register buffer cleanup function"
+msgstr "Kon functie om buffer te verwijderen niet registreren"
+
+#: gom/gom.c:115
+msgid "Could not register gom cleanup function"
+msgstr "Kon functie voor vrijgeven van object model niet registreren"
+
+#: gom/gom.c:226
+#, c-format
+msgid "Cross-reference key '%s' is already in use"
+msgstr "Verwijzing %s bestaat al"
+
+#: gom/gom.c:234
+#, c-format
+msgid "Internal error: Unexpected context at %s, line %d: %s"
+msgstr "Interne fout: Onverwachte context in %s, lijn %d: %s"
+
+#: gom/gom.c:240
+#, c-format
+msgid "Internal error: No context at %s, line %d"
+msgstr "Interne fout: Geen context in %s, lijn %d"
+
+#: gom/gom.c:246
+#, c-format
+msgid "Could not move struct of type %s"
+msgstr "Kon structuur van type '%s' niet verplaatsen"
+
+#: gom/gom.c:251
+#, c-format
+msgid "Could not find struct of type %s in chain"
+msgstr "Kon structuur van type %s niet vinden in de keten"
+
+#: gom/gom.c:258
+#, c-format
+msgid "Data loss in import: \"%d %s %s\""
+msgstr "Gegevensverlies in inlezen: \"%d %s %s\""
+
+#: gom/gom_modify.c:56
+#, c-format
+msgid "The input '%s' is not a valid UTF-8 string"
+msgstr "De invoer '%s' is geen geldige UTF-8 karakterrij"
+
+#: gom/gom_modify.c:84
+#, c-format
+msgid "The input '%s' is not a valid string for the locale"
+msgstr "De invoer '%s' is geen geldige karakterrij voor de locale"
+
+#: gom/gom_modify.c:126 gom/gom_modify.c:160 gom/gom_modify.c:178
+#, c-format
+msgid "No record found for xref '%s'"
+msgstr "Geen record gevonden voor verwijzing '%s'"
+
+#: gom/gom_modify.c:188
+#, c-format
+msgid "Xref '%s' not part of chain"
+msgstr "Verwijzing '%s' is geen deel van de keten"
+
+#: gom/event.c:297 gom/lds_event.c:151
+#, c-format
+msgid "Internal error: unknown evt tag %d"
+msgstr "Interne fout: ongekende evt tag %d"
+
+#: gom/event.c:301
+#, c-format
+msgid "Internal error: unknown evt type %d"
+msgstr "Interne fout: ongekend evt type %d"
+
+#: gom/event.c:317
+msgid "Internal error: wrong parent for evt->family"
+msgstr "Interne fout: verkeerde ouder tag voor evt->family"
+
+#: bin/gedcom-check.c:121
+msgid "Parse succeeded\n"
+msgstr "Verwerking gelukt\n"
+
+#: bin/gedcom-check.c:124 bin/gedcom-sanitize.c:188
+msgid "Parse failed\n"
+msgstr "Verwerking niet gelukt\n"
+
+#: bin/gedcom-check.c:126
+msgid "  Note: Compatibility mode was not enabled\n"
+msgstr "  Nota: Compatibiliteitsmode was niet aangezet\n"
+
+#: bin/gedcom-check.c:127
+msgid "  You could try the check again using the '-c' option\n"
+msgstr "  Je zou de controle opnieuw kunnen proberen met de '-c' optie\n"
+
+#: bin/gedcom-sanitize.c:173
+#, c-format
+msgid "Parse succeeded, now writing file '%s'\n"
+msgstr "Verwerking gelukt, nu wordt file '%s' geschreven\n"
+
+#: bin/gedcom-sanitize.c:181
+msgid "Write succeeded\n"
+msgstr "Schrijven gelukt\n"
+
+#: bin/gedcom-sanitize.c:184
+msgid "Write failed\n"
+msgstr "Schrijven niet gelukt\n"
